@@ -1,4 +1,4 @@
-# Liferay Basic Training - Anotações
+# Liferay Basic Training - Material Extra
 
 1. [Fedora](1-Fedora) 
 
