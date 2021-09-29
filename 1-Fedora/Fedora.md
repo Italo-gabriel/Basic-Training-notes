@@ -866,4 +866,3 @@ Se você congelar seu terminal acidentalmente com o ***Ctrl + S***, simplesmente
 
 
 
-Navegando no sistema de arquivos com Thunar
