@@ -6,7 +6,8 @@
 
     Controla varias versões de um arquivo versionando e tirando fotos(snapshots), guardando os estados dos arquivos(os arquivos que não foram modificados são levados juntos.
 
-       (snapshots) Levam assim todos os arquivos juntos mesmo se eles não tiverem sido alterados, (ele faz um link simbólico mostrando que os arquivos estão indo ,mas que não foram modificados o sistema tira uma foto e manda junto com os arquivos que foram modificados) dessa forma nenhuma informacão se perde. 
+    (snapshots) Levam assim todos os arquivos juntos mesmo se eles não tiverem sido alterados, (ele faz um link simbólico mostrando que os arquivos estão indo ,mas que não foram modificados o sistema tira uma foto e manda junto com os arquivos que foram modificados) dessa forma nenhuma informacão se perde. 
+    
 ![](imagens/000.png)
 
 >>## 2 pontos importantes do sistema git***             
