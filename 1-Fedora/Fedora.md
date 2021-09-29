@@ -787,7 +787,7 @@ Se você congelar seu terminal acidentalmente com o ***Ctrl + S***, simplesmente
 ***Ctrl+R*** = busca um comando recente
 
 ># 14 Tópico - Comandos Linux de ( A a Z ) Guia Linux
-![](https://guialinux.uniriotec.br/)
+![site ] (https://guialinux.uniriotec.br/)
 
 
 
