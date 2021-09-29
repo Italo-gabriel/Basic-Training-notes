@@ -856,4 +856,3 @@ Se você congelar seu terminal acidentalmente com o ***Ctrl + S***, simplesmente
 ![] (https://canaltech.com.br/linux/entendendo-a-estrutura-de-diretorios-do-linux/)
 
 ![] (https://www.linuxando.com/tutorial.php?t=A%20estrutura%20de%20diret%C3%B3rios%20Linux_6)
-

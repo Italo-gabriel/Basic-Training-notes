@@ -214,24 +214,3 @@ Não era todo dia que isso acontecia , então ficava muuito tempo Ocioso, muitos
 ![] (https://blog.geekhunter.com.br/o-que-e-deploy/)
 
 ![] (https://www.redhat.com/pt-br/topics/virtualization/what-is-a-hypervisor)
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-                                            
-
-
-
-
-
-

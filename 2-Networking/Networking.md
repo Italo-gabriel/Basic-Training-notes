@@ -182,4 +182,3 @@ Systemd é um sistema init e gerenciador de sistema que se tornou o novo padrão
 
 ![] (https://access.redhat.com/documentation/pt-br/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/index)
 
-
