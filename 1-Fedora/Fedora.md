@@ -787,4 +787,73 @@ Se você congelar seu terminal acidentalmente com o ***Ctrl + S***, simplesmente
 ***Ctrl+R*** = busca um comando recente
 
 ># 14 Tópico - Comandos Linux de ( A a Z ) Guia Linux
-![site ] (https://guialinux.uniriotec.br/)
+![] (https://guialinux.uniriotec.br/)
+
+># 14 Tópico - Links extras (Bibliografia)
+
+![] (https://docs.fedoraproject.org/en-US/docs/)
+
+![] (https://devcontent.com.br/artigos/linux/principais-comandos-terminal)
+
+![] (https://help.ubuntu.com/kubuntu/desktopguide/pt_BR/terminals.html)
+
+![] (https://pt.wikihow.com/Obter-Acesso-Root-no-Linux)
+
+![] (https://diolinux.com.br/tutoriais/como-usar-o-thunar-como-gerenciador-de-arquivos-padrao-no-ubuntu.html)
+
+![] (https://www.ti-enxame.com/pt/thunar/)
+
+![] (https://livreeaberto.com/baixar-arquivos-do-terminal-linux)
+
+![] (https://sempreupdate.com.br/como-baixar-arquivos-via-linha-de-comando-usando-wget/)
+
+![] (https://e-tinet.com/linux/wget/)
+
+![] (https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/Como-fazer-download-de-arquivos)
+
+![] (https://www.hostinger.com.br/tutoriais/wget-o-que-e-como-instalar-comandos-wget)
+
+![] (https://br.atsit.in/archives/31773)
+
+![] (https://www.hostinger.com.br/tutoriais/comando-rsync-linux)
+
+![] (https://e-tinet.com/linux/sincronizacao-de-arquivos-no-linux-rsync/)
+
+![] (http://www.bosontreinamentos.com.br/linux/10-exemplos-do-comando-rsync-para-backup-e-sincronismo-de-arquivos-no-linux/)
+
+![] (https://e-tinet.com/linux/usuario-root/)
+
+![] (https://www.edivaldobrito.com.br/desativar-a-conta-root-no-linux/)
+
+![] (https://help.ubuntu.com/kubuntu/desktopguide/pt_BR/root-and-sudo.html)
+
+![] (https://www.dicas-l.com.br/arquivo/root_direitos_privilegios_e_seguranca.php)
+
+![] (https://elias.praciano.com/2014/07/monitore-o-seu-sistema-com-as-ferramentas-do-sysstat/)
+
+![] (https://www.youtube.com/watch?v=mxeOAjdQ_rk&list=RDCMUCzOGJclZQvPVgYZIwERsf5g&start_radio=1&t=39s)
+
+![] (https://pt.wikibooks.org/wiki/Guia_do_Linux/Iniciante%2BIntermedi%C3%A1rio/Execu%C3%A7%C3%A3o_de_programas/path)
+
+![] (https://www.infowester.com/linuxpermissoes.php)
+
+![] (https://www.filemagic.com/pt-br/uncommon-files/ant-file-extension/ant-files-what-it-is-and-how-to-open-it/)
+
+![] (https://www.vivaolinux.com.br/artigo/O-que-e-PATH-como-funciona-e-como-trabalhar-com-ele)
+
+![] (https://ant.apache.org/)
+
+![] (https://guialinux.uniriotec.br/chmod/)
+
+![] (https://e-tinet.com/linux/chmod/)
+
+![] (https://www.linuxforce.com.br/comandos-linux/comandos-linux-comando-chmod/)
+
+![] (https://devcontent.com.br/artigos/linux/como-executar-scripts-no-terminal)
+
+![] (https://canaltech.com.br/linux/Introducao-ao-Shell-Script/)
+
+![] (https://canaltech.com.br/linux/entendendo-a-estrutura-de-diretorios-do-linux/)
+
+![] (https://www.linuxando.com/tutorial.php?t=A%20estrutura%20de%20diret%C3%B3rios%20Linux_6)
+

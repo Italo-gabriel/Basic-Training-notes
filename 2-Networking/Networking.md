@@ -26,6 +26,14 @@ Como gerenciador de rede a ferramenta nmcli pode criar, deletar, editar, ativar,
 ***nmcli device status*** = Liste os dispositivos disponíveis e seus status
 ![Mais informações] (https://fedoraproject.org/wiki/Networking/CLI)
 
+![] (https://access.redhat.com/documentation/pt-br/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-nmcli_configuring-and-managing-networking)
+
+![] (https://access.redhat.com/documentation/pt-br/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/ref-frequent-nmcli-commands_getting-started-with-nmcli)
+
+![] (https://gnulinuxbrasil.com.br/2021/07/24/gerenciando-rede-com-mncli-no-linux/)
+
+![] (https://www.youtube.com/watch?v=XtyrKtBciEE)
+
 ># 2 TÓPICO - Ping
 
 ![](imagens/003.jpeg)
@@ -41,6 +49,26 @@ O Ping é uma ferramenta comum para identificar problemas de conexão entre disp
 É preciso entender o que está causando o problema. Pode ser desde problemas de conexão com a internet, perda de dados ou o site não está mais disponível. O comando ping nos ajuda a identificar a melhor maneira de resolver o problema.
 
 ![Mais informações] (https://www.hostinger.com.br/tutoriais/comando-ping-linux?ppc_campaign=google_performance_max&gclid=Cj0KCQjwsZKJBhC0ARIsAJ96n3UQT3RgY2VYhtbDqU2Y4FIUzCDzGTtACQbrkUL8DltSmdZCvQq3nyQaAnfwEALw_wcB)
+
+![] (https://linux.die.net/man/8/ping)
+
+![] (https://www.hostinger.com.br/tutoriais/comando-ping-linux?ppc_campaign=google_performance_max&gclid=Cj0KCQjwsZKJBhC0ARIsAJ96n3UQT3RgY2VYhtbDqU2Y4FIUzCDzGTtACQbrkUL8DltSmdZCvQq3nyQaAnfwEALw_wcB)
+
+![] (https://www.hostgator.com.br/blog/comando-linux-ping/)
+
+![] (https://kb.vmware.com/s/article/2018931?lang=pt_PT)
+
+![] (https://guialinux.uniriotec.br/ping/)
+
+![] (https://pt.wikihow.com/Executar-o-PING-no-Linux)
+
+![] (https://www.elitevisual.com.br/sites/guia-basico-como-usar-o-comando-ping-no-linux/)
+
+![] (https://www.vivaolinux.com.br/dica/O-comando-ping)
+
+![] (https://www.linuxforce.com.br/comandos-linux/comandos-linux-comando-ping/)
+
+![] (https://www.youtube.com/watch?v=72H1Egwomsg)
 
 ># 3 TÓPICO - SSH
 ![](imagens/004.jpg)
@@ -71,6 +99,7 @@ ESTA UTILIZANDO AGORA AS CHAVES QUE FORAM SINCRONIZADAS. chave publica no Autori
 
 ![mais informações] (https://www.alura.com.br/artigos/como-acessar-servidores-remotamente-com-ssh?gclid=CjwKCAjw1JeJBhB9EiwAV612y_Dsv4OFrldIsbYHz0xvnRR9ZPPWDI3EEp03rCw0m4vPptKGMywrRBoCWhMQAvD_BwE)(https://www.alura.com.br/artigos/entendendo-as-diferencas-entre-telnet-e-ssh)
 
+
 ># 3 TÓPICO - SFTP
 
 ![](imagens/005.png)
@@ -90,6 +119,12 @@ SFTP, ou SSH File Transfer Protocol, é uma maneira muito mais segura de mover a
 
 ![mais informações] (https://www.digitalocean.com/community/tutorials/como-utilizar-o-sftp-para-transferir-arquivos-com-seguranca-com-um-servidor-remoto-pt)(https://www.hostinger.com.br/tutoriais/como-usar-sftp-ssh-file-transfer-protocol)
 
+![] (https://www.digitalocean.com/community/tutorials/como-utilizar-o-sftp-para-transferir-arquivos-com-seguranca-com-um-servidor-remoto-pt)
+
+![] (https://www.hostinger.com.br/tutoriais/como-usar-sftp-ssh-file-transfer-protocol)
+
+![] (https://linux.die.net/man/1/sftp
+)
 ># 4 TÓPICO - Rsync
 
 ![](imagens/006.png)![](imagens/007.xcf)
@@ -116,6 +151,14 @@ Seu computador possui um IP e escuta em muitas portas. As portas são números e
 
 ![mais informações] (https://king.host/wiki/artigo/portas-de-comunicacao/#:~:text=As%20portas%20de%20comunica%C3%A7%C3%A3o%20s%C3%A3o,padr%C3%A3o%20para%20envio%20de%20emails.&text=Como%20analogia%2C%20podemos%20dizer%20que,o%20n%C3%BAmero%20do%20seu%20apartamento.)
 
+![] (https://www.hostinger.com.br/tutoriais/o-que-e-localhost)
+
+![] (https://www.linuxforce.com.br/comandos-linux/comandos-linux-comando-telnet/)
+
+![] (https://pt.stackoverflow.com/questions/107682/como-saber-se-uma-porta-est%C3%A1-aberta-ou-n%C3%A3o-no-linux)
+
+![] (https://linux.die.net/man/1/telnet)
+
 ># 6 TÓPICO - Systemctl
 
 ![](imagens/009.jpg)
@@ -136,5 +179,7 @@ Systemd é um sistema init e gerenciador de sistema que se tornou o novo padrão
 ![mais informações] (https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units-pt)
 
 ![Protocolos de Rede: O Que São, Como Funcionam e Tipos de Protocolos de Internet] (https://www.weblink.com.br/blog/tecnologia/conheca-os-principais-protocolos-de-internet/)
+
+![] (https://access.redhat.com/documentation/pt-br/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/index)
 
 

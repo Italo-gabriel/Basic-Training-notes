@@ -72,10 +72,7 @@ tudo isso ficava a maior parte do tempo Ocioso(sem usar) porque a aplicação co
 Não era todo dia que isso acontecia , então ficava muuito tempo Ocioso, muitos Recursos desperdiçados.
 
 * melhorando a situação de um servido Ocioso , curso demorado e desperdicio de Recursos >>> SURGIU A VIRTUALIZAÇÃO  - 
-\
 
-
->>>>   CONTINUAR DAQUI  <<<<<<<  
 
 
 
@@ -179,6 +176,46 @@ Não era todo dia que isso acontecia , então ficava muuito tempo Ocioso, muitos
 
 ># 1 Tópico - Primeiros passos com o Docker
 ![](imagens/05.png)
+
+># Bibliografia - Links Extras
+
+![] (https://docker-curriculum.com/)
+
+![] (https://blog.hostone.com.br/host/)
+
+![] (https://www.youtube.com/watch?v=0cDj7citEjE)
+
+![] (https://www.hostinger.com.br/tutoriais/remover-imagem-docker)
+
+![] (https://www.hostinger.com.br/tutoriais/remover-imagens-docker)
+
+![] (https://www.hostinger.com.br/tutoriais/?s=docker)
+
+![] (https://www.youtube.com/watch?v=mfX0y9zvRMk)
+
+![] (https://www.youtube.com/watch?v=a0ts9vhaY0w)
+
+![] (https://labs.play-with-docker.com/)
+
+![] (https://aws.amazon.com/pt/)
+
+![] (https://aws.amazon.com/pt/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc)
+
+![] (https://aws.amazon.com/pt/elasticbeanstalk/)
+
+![] (https://aws.amazon.com/pt/ecs/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc&ecs-blogs.sort-by=item.additionalFields.createdDate&ecs-blogs.sort-order=desc)
+
+![] (https://docs.docker.com/desktop/mac/install/)
+
+![] (https://docs.docker.com/engine/install/ubuntu/)
+
+![] (https://docs.docker.com/desktop/windows/install/)
+
+![] (https://blog.geekhunter.com.br/o-que-e-deploy/)
+
+![] (https://www.redhat.com/pt-br/topics/virtualization/what-is-a-hypervisor)
+
+
 
 
 
