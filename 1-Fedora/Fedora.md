@@ -789,7 +789,7 @@ Se você congelar seu terminal acidentalmente com o ***Ctrl + S***, simplesmente
 ># 14 Tópico - Comandos Linux de ( A a Z ) Guia Linux
 ![] (https://guialinux.uniriotec.br/)
 
-># 14 Tópico - Links extras (Bibliografia)
+># 15 Tópico - Links extras (Bibliografia)
 
 ![] (https://docs.fedoraproject.org/en-US/docs/)
 
