@@ -11,19 +11,20 @@ Como gerenciador de rede a ferramenta nmcli pode criar, deletar, editar, ativar,
 
 ![](imagens/001.jpg)
 
-***nmcli ou ifconfig*** = podemos identificar as informações de rede , ip de nossa maquina na rede e outras informações.
+- ***nmcli ou ifconfig*** = podemos identificar as informações de rede , ip de nossa maquina na rede e outras informações.
 
-***nmcli deive wifi list*** = lista as redes wifi disponiveis 
+- ***nmcli deive wifi list*** = lista as redes wifi disponiveis 
 
-***nmcli device wifi connect 'NomeRedeWifi' password 'SenhaDoWifi*** = para se conectar com a rede wifi 
+- ***nmcli device wifi connect 'NomeRedeWifi' password 'SenhaDoWifi*** = para se conectar com a rede wifi 
 
-***nmcli radio wifi*** = para saber se o wifi esta habilitado ou não 
+- ***nmcli radio wifi*** = para saber se o wifi esta habilitado ou não 
 
-***nmcli radio on*** = liga o wifi
+- ***nmcli radio on*** = liga o wifi
 
-***nmcli radio off*** = desliga o wifi 
+- ***nmcli radio off*** = desliga o wifi 
 
-***nmcli device status*** = Liste os dispositivos disponíveis e seus status
+- ***nmcli device status*** = Liste os dispositivos disponíveis e seus status
+
 ![Mais informações] (https://fedoraproject.org/wiki/Networking/CLI)
 
 ![] (https://access.redhat.com/documentation/pt-br/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-nmcli_configuring-and-managing-networking)
@@ -41,7 +42,7 @@ Como gerenciador de rede a ferramenta nmcli pode criar, deletar, editar, ativar,
         O QUE FAZ O PING ? 
 podemos ter o acesso ao tempo de envio e recebimento de resposta de uma rede. Ele funciona enviando uma série de mensagens ICMP (Internet Control Message Protocol) ao host de destino e aguarda por uma resposta echo do host ou dispositivo. Assim, somos informados sobre o funcionamento da rede.
 
-***ping 'IP da Máquina' ou 'endereço da página*** = vai mostrar a latencia da rede , indica se esta boa a conexão com a rede , verificando conectividade.
+- ***ping 'IP da Máquina' ou 'endereço da página*** = vai mostrar a latencia da rede , indica se esta boa a conexão com a rede , verificando conectividade.
 
 >**Resumo**
 O Ping é uma ferramenta comum para identificar problemas de conexão entre dispositivos e redes. Ele ajuda a entender o porquê de um site não estar funcionando.
@@ -76,19 +77,19 @@ O Ping é uma ferramenta comum para identificar problemas de conexão entre disp
         o que é o SSH?
 SSH é o protocolo para o acesso remoto. Ele nos permite fazer uma conexão segura entre as nossas máquinas, acessando um secure shell.
 
-***sudo systemctl start sshd.service*** = iniciar o daemon SSH para que outras pessoas possam usar o SSH em seu computador. Conecte-se via SSH a um computador remoto.
+- ***sudo systemctl start sshd.service*** = iniciar o daemon SSH para que outras pessoas possam usar o SSH em seu computador. Conecte-se via SSH a um computador remoto.
 
-***ssh 'IP da maquina que vai se conectar'*** = vai fazer a conexão remota com a maquina identificada pelo IP
+- ***ssh 'IP da maquina que vai se conectar'*** = vai fazer a conexão remota com a maquina identificada pelo IP
 
-***ssh-keygen -t rsa -C "email"*** =  gera as duas chaves ssh , uma privada e outra publica.
+- ***ssh-keygen -t rsa -C "email"*** =  gera as duas chaves ssh , uma privada e outra publica.
 
-***chmod 700 ~ /.ssh*** =  para alterar a permissão desse diretório para um valor de 700. 
+- ***chmod 700 ~ /.ssh*** =  para alterar a permissão desse diretório para um valor de 700. 
 
         Digite la ~ / .ssh. Já existe um arquivo chamado authorized_keys que normalmente não existiria em uma nova instalação, mas foi instalado em seu computador anteriormente
 
-***more ~/.ssh/authorized_keys*** =  arquivo onde vai ser colocado a chave ssh Pública para que possa se conectar com o par de chaves ssh, sem a necessidade de senha do usuário do pc.
+- ***more ~/.ssh/authorized_keys*** =  arquivo onde vai ser colocado a chave ssh Pública para que possa se conectar com o par de chaves ssh, sem a necessidade de senha do usuário do pc.
 
-***chmod 640 ~/.ssh/authorized_key*** = Volte para a guia onde você está logado no computador do vizinho e digite chmod 640 ~ / .ssh / authorized_keys para garantir as permissões corretas. 
+- ***chmod 640 ~/.ssh/authorized_key*** = Volte para a guia onde você está logado no computador do vizinho e digite chmod 640 ~ / .ssh / authorized_keys para garantir as permissões corretas. 
 
         *DEPOIS DE COMANDO*
 Abra uma nova guia Terminator e SSH no computador do seu vizinho. Observe que você não precisa mais digitar um nome de usuário ou senha. 
@@ -109,11 +110,11 @@ SFTP, ou SSH File Transfer Protocol, é uma maneira muito mais segura de mover a
 
 É o único protocolo de transferência de arquivos que protege contra ataques em qualquer ponto do processo de transferência de dados, sendo então o protocolo preferido.
 
-***sftp 'IP'*** = vai se conectar a outra máquina pelo protocolo SFTP
+- ***sftp 'IP'*** = vai se conectar a outra máquina pelo protocolo SFTP
 
-***put 'NomeDoArquivo'*** = para enviar um de seus arquivos para a outra maquina pelo SFTP
+- ***put 'NomeDoArquivo'*** = para enviar um de seus arquivos para a outra maquina pelo SFTP
 
-***get 'NomeDoArquivo'*** = para baixar um dos arquivos do seu vizinho. 
+- ***get 'NomeDoArquivo'*** = para baixar um dos arquivos do seu vizinho. 
 
          Digitando exit se desconecta do SFTP
 
@@ -132,9 +133,9 @@ SFTP, ou SSH File Transfer Protocol, é uma maneira muito mais segura de mover a
         O que é o Rsync?
 O Rsync é uma ferramenta de sincronização habilitada em rede muito. Devido à sua onipresença em sistemas Linux e do tipo Unix, além da sua popularidade como uma ferramenta para scripts de sistema, ela é incluída na maioria das distribuições Linux por padrão.
 
-***rsync -av /home/me/'NomeDoArquivoOuPasta' me@192.168.xxx.xxx:/home/me*** = do meu pc para o computador do vizinho.
+- ***rsync -av /home/me/'NomeDoArquivoOuPasta' me@192.168.xxx.xxx:/home/me*** = do meu pc para o computador do vizinho.
 
-***rsync -av me@192.168.xxx.xxx:/home/me/'NomeDoArquivoOuPasta' /home/me*** = do meu pc do vizinho para a minha maquina.
+- ***rsync -av me@192.168.xxx.xxx:/home/me/'NomeDoArquivoOuPasta' /home/me*** = do meu pc do vizinho para a minha maquina.
 
 ![mais informações] (https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-pt)
 
@@ -168,13 +169,13 @@ Systemd é um sistema init e gerenciador de sistema que se tornou o novo padrão
 
         O objetivo fundamental de um sistema init é inicializar os componentes que devem ser iniciados após o kernel do Linux ser inicializado (tradicionalmente conhecido como componentes “userland”). O sistema init também é usado para gerenciar serviços e daemons para o servidor em qualquer momento enquanto o sistema está em execução. 
 
-***systemctl status sshd.service.*** =  para ver se esta ativado ou desativado o serviço de comunicação.
+- ***systemctl status sshd.service.*** =  para ver se esta ativado ou desativado o serviço de comunicação.
 
-***sudo systemctl stop sshd.service*** =  faz parar o Daemon 
+- ***sudo systemctl stop sshd.service*** =  faz parar o Daemon 
 
-***sudo systemctl start sshd.service.*** = faz iniciar , habilitar novamente
+- ***sudo systemctl start sshd.service.*** = faz iniciar , habilitar novamente
 
-***sudo systemctl enable sshd.service.*** = Para iniciar um serviço na inicialização, use o comando enable
+- ***sudo systemctl enable sshd.service.*** = Para iniciar um serviço na inicialização, use o comando enable
 
 ![mais informações] (https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units-pt)
 
