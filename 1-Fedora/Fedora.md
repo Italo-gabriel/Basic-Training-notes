@@ -32,7 +32,9 @@
 
 [~] = significa pasta pessoal (~ é o mesmo que >>> /home/me) 
 
-[/] = onde se encontra o diretório raiz do sistema linux , para guarda as informacões de programas instalados no sistema e também pastas de funcionamento do próprio sistema linux.
+[/] = onde se encontra o diretório raiz do sistema linux , 
+para guarda as informacões de programas instalados no sistema e 
+também pastas de funcionamento do próprio sistema linux.
 ``` 
 
 - ***pwd*** = mostra qual o caminho/diretório que está atualmente. 
@@ -138,7 +140,9 @@ Quando entramos em algum editor de texto pelo terminal por exemplo e queremos sa
 - ***nl NomedoArquivo*** =  mostra o conteudo do arquivo assim como o [cat] , mas ele tras a numeracão das linhas.
 
 ``` 
-Outra forma de ver o número de linhas de um arquivo é com o comando [wc -l NomedoArquivo] , vai contar com as linhas em branco, diferente do nl que traz o número de linhas que tem algo escrito, sem contar as linhas em branco.
+Outra forma de ver o número de linhas de um arquivo é com o comando [wc -l NomedoArquivo]
+,vai contar com as linhas em branco, diferente do nl que traz o número de linhas que tem 
+algo escrito, sem contar as linhas em branco.
 ``` 
 
 - ***wc -l NomedoArquivo*** = traz os números de linhas , contando com as linhas em branco. 
@@ -199,7 +203,8 @@ e se quisermos criar um arquivo com isso que foi impresso no terminal, como faze
 - ***cal > 'NomeDoArquivo'*** = é criado um arquivo com a informacão que o comando mostra no terminal.
 
 ```
-nesse caso vai mostrar o calendario, mas pode ser utilizado por qualquer comando que traga informacoes na tela do terminal
+nesse caso vai mostrar o calendario, mas pode ser utilizado
+por qualquer comando que traga informacoes na tela do terminal
 ```
 
 >>**[ADICIONANDO INFORMAÇÕES A UM ARQUIVO EXISTENTE]**
@@ -230,13 +235,15 @@ QUANDO PEGAMOS UMA SAIDA , E EXIBIMOS O CONTEUDO
 - ***cat 'NomeDoArquivo' | grep 'nome do termo quer pesquisar'*** =  o comando grep vai fazer uma busca por algum termo dentro do arquivo e vai exibir os termos encontrados.
 
 ```
-FOI UTILIZADO 2 COMANDOS , O *cat* PARA MOSTRAR O ARQUIVO , E O *grep* PARA BUSCAR UM TERMO DENTRO DO ARQUIVO e exibi-lo.
+FOI UTILIZADO 2 COMANDOS , O *cat* PARA MOSTRAR O ARQUIVO 
+, E O *grep* PARA BUSCAR UM TERMO DENTRO DO ARQUIVO e exibi-lo.
 ```
 
 - ***cat 'NomeDoArquivo' | more*** = vai mostrar o conteúdo paginado,e logo embaixo aparece uma informaÇão [mais] indicando que existe mais contéudo para ser rolado para baixo.
 
 ```
-Voce vai descendo o texto com as setas do teclado, e o arquivo vai passando pelas páginas até se findar e volta para o terminal.
+Voce vai descendo o texto com as setas do teclado, 
+e o arquivo vai passando pelas páginas até se findar e volta para o terminal.
 ```
 
 - ***cat 'NomeDoArquivo' | less*** = também faz a paginacão,a diferença é que ele não mostra o [mais] indicando que existe mais conteudo descendo, fica mostrando [:] e quando chega no final ele não volta para o terminal.
@@ -293,7 +300,9 @@ comandos para buscar informações do sistema
 **O que é rede ?**
 
 ```
-Conjunto de equipamentos interligados de maneira a trocarem informações e compartilharem recursos, como arquivos de dados gravados, impressoras, modems, softwares e outros equipamentos.
+Conjunto de equipamentos interligados de maneira a trocarem 
+informações e compartilharem recursos, como arquivos de dados
+gravados, impressoras, modems, softwares e outros equipamentos.
 ```
 
 Cada equipamento que existe dentro dessa rede ,é chamada de "nó" são os pontos de rede.
@@ -326,7 +335,12 @@ Para que essas redes se comuniquem , existem alguns tradutores que fazem a comun
     Para que esses protocolos se comuniquem existem as interfaces. 
 ![](imagens/012.png)
 
-    para fazer a instalacão de pacotes(programas) em nosso computador, usamos o comando [sudo su] para entrar no usuario ROOT, ou podemos digitar [sudo dnf install "nome do programa"] que ele vai pedir a permissão com a senha do usuário.
+```
+para fazer a instalacão de pacotes(programas) em nosso 
+computador, usamos o comando [sudo su] para entrar no 
+usuario ROOT, ou podemos digitar [sudo dnf install "nome do programa"]
+ que ele vai pedir a permissão com a senha do usuário.
+```
 
 - ***sudo su*** = entrar no super usuário,(ROOT)  e podemos passar o comando para instalacão [dnf install 'nome do programa']
 
@@ -369,9 +383,12 @@ para finalizar o ping - tecla de atalho [Ctrl+Z] ou [Ctrl+C]
 - ***dig*** = tras informacões sobre DNS , que são os caminhos de rede. é o serviço de nomes de domínios -DNS vai trazer o IP do site que queremos acessar.
 
 ```
-O DNS transforma esse nome que eu digitei (nome do site) em IP para buscar esse site no servidor.
+O DNS transforma esse nome que eu digitei (nome do site)
+em IP para buscar esse site no servidor.
     
-como se fosse o nome da pessoa e o IP é a identidade da pessoa. então quando digitamos o nome do site ele vai buscar a identidade daquele site , que no caso é o IP
+como se fosse o nome da pessoa e o IP é a identidade da 
+pessoa. então quando digitamos o nome do site ele vai buscar 
+a identidade daquele site , que no caso é o IP
 ```
 
 ![](imagens/015.png)
@@ -500,7 +517,10 @@ RESUMO DOS COMANDOS
 ># 8 Tópico -Compactação, descompactação e arquivamento
 
 ```
-COMPACTADORES SÃO PROGRAMAS QUE DIMINUEM O TAMANHO DE UM ARQUVIO OU DIRETÓRIO, com a finalidade de envia-lo com mais rapidez quando for compartilhar na rede , ou apenas para dinimuir o tamanho e ocupar menos espaço na máquina
+COMPACTADORES SÃO PROGRAMAS QUE DIMINUEM O TAMANHO 
+DE UM ARQUVIO OU DIRETÓRIO, com a finalidade de envia-lo
+com mais rapidez quando for compartilhar na rede , 
+ou apenas para dinimuir o tamanho e ocupar menos espaço na máquina
 ```
 
 ![](imagens/031.png)
@@ -554,7 +574,9 @@ foi descompactado, os arquivos foram listados e extraidos da pasta [.tar.gz]
 ![](imagens/035.png)
 
 ```
-se eu quiser indicar o local onde os arquivos devem ser colocados apos ser extraido utiliza-se a opção[ -C 'o local onde vai os arquivos'] 
+se eu quiser indicar o local onde os arquivos devem 
+ser colocados apos ser extraido utiliza-se a opção
+[ -C 'o local onde vai os arquivos'] 
 
 A sintaxe fica assim [tar -xvf 'NomedoArquivoGerado.tar.gz' -C 'o local onde vai os arquivos']
 ```
@@ -844,7 +866,12 @@ Remover um usuário é muito semelhante a adicionar um novo usuário. Para exclu
 Use o comando ***clear***  ou ***Ctrl + L***, para limpar o terminal se estiver cheio de muitos comandos usados anteriormente. 
 
 ```
-Experimente o botão ***TAB*** para preencher automaticamente o que você está digitando. Por exemplo, se você precisa digitar Documentos, comece a digitar o comando (vamos usar o cd Docu, então aperte a tecla TAB) e o terminal preencherá o restante, mostrando o cd Documents.
+Experimente o botão ***TAB*** para preencher 
+automaticamente o que você está digitando. 
+Por exemplo, se você precisa digitar Documentos, 
+comece a digitar o comando (vamos usar o cd Docu, 
+então aperte a tecla TAB) e o terminal preencherá 
+o restante, mostrando o cd Documents.
 ```
 
 ***Ctrl + C*** e ***Ctrl + Z*** =  são usados para qualquer comando que esteja funcionando no momento. Ctrl + C interromperá o comando com segurança, e o Ctrl + Z forçara a parada.
