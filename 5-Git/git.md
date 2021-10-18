@@ -3,18 +3,26 @@
 ![](imagens/gitXgithub.png)
 ># CONCEITO git - Repositorio local
 ```
-Controla varias versões de um arquivo versionando e tirando fotos(snapshots), guardando os estados dos arquivos(os arquivos que não foram modificados são levados juntos.
+Controla varias versões de um arquivo versionando e tirando 
+fotos(snapshots), guardando os estados dos arquivos(os arquivos 
+que não foram modificados são levados juntos.
 
-(snapshots) Levam assim todos os arquivos juntos mesmo se eles não tiverem sido alterados, (ele faz um link simbólico mostrando que os arquivos estão indo ,mas que não foram modificados o sistema tira uma foto e manda junto com os arquivos que foram modificados) dessa forma nenhuma informacão se perde. 
+(snapshots) Levam assim todos os arquivos juntos mesmo se eles 
+não tiverem sido alterados, (ele faz um link simbólico mostrando 
+que os arquivos estão indo ,mas que não foram modificados o sistema 
+tira uma foto e manda junto com os arquivos que foram modificados) 
+dessa forma nenhuma informacão se perde. 
 ```    
 ![](imagens/000.png)
 
 >>## 2 pontos importantes do sistema git***             
 ```
-> 1- responsavel por versionar os arquivos do projeto, sem a necessidade de criar varios arquivos ,e varias versoes manualmente
+> 1- responsavel por versionar os arquivos do projeto, sem a 
+necessidade de criar varios arquivos ,e varias versoes manualmente
 
 
-> 2- o git trabalha com os estados dos arquivos, diferente dos outros sistemas de versionamento que trabalham com as diferencas dos arquivos 
+> 2- o git trabalha com os estados dos arquivos, diferente dos 
+outros sistemas de versionamento que trabalham com as diferencas dos arquivos 
 ```
 ># CONCEITO github - Repositorio Remoto
 ```
@@ -40,7 +48,8 @@ Servico de web onde podemos colocar os nossos projetos do git
 
 ***mkdir*** = cria uma pasta
 ```
-e dentro da pasta que foi criada dar o cOmando ***git init*** = inicia um repositório local, onde vamos trabalhar com as modificacões - é criado uma pasta.git onde vai esta guardado todas as modificacões
+e dentro da pasta que foi criada dar o cOmando ***git init*** = inicia um repositório local
+, onde vamos trabalhar com as modificacões - é criado uma pasta.git onde vai esta guardado todas as modificacões
 ```
 ![](imagens/001.png)
 
@@ -58,28 +67,34 @@ E em seguida ***:wq*** = salvar e sair
 **UNTRACKED** = não marcado
 
 ```
-Momento que o arquivo foi adicionado dentro da pasta , mas o git não o reconhece por que nao foi feito nenhum versão.(nao  existe para o git)
+Momento que o arquivo foi adicionado dentro da pasta , mas o git não o 
+reconhece por que nao foi feito nenhum versão.(nao  existe para o git)
 ```
 **UNMODIFIED** = nao foi modificado 
 
 ```
-Quando adicionamos um arquivo com o ***git add*** mas nao foi feito nenhuma modificacão no arquivo, apenas foi adicionado ao git. (existe para o git)
+Quando adicionamos um arquivo com o ***git add*** mas nao foi 
+feito nenhuma modificacão no arquivo, apenas foi adicionado ao git. (existe para o git)
 ```
 **MODIFIED** = Modificado
 
 ```
-quando modificamos um arquivo que ja foi adicionado podemos jogar ele para uma area onde vai ser criada a versão
+quando modificamos um arquivo que ja foi adicionado podemos 
+jogar ele para uma area onde vai ser criada a versão
 ```   
 ***AREA DE STAGED*** 
 **STAGED** ESTADO
 
 ```
 Momento em que o arquivo é modificado
-onde vai ser criada uma versao, e no momento que o arquivo estiver pronto podemos dar o ***git commit***
+onde vai ser criada uma versao, e no momento que o 
+arquivo estiver pronto podemos dar o ***git commit***
 
-e quando finalizamos com o commit esses arquivos voltam para o UNTRACKTED com uma nova cara versao 2 ,por que ele ja crio uma versao 
+e quando finalizamos com o commit esses arquivos voltam 
+para o UNTRACKTED com uma nova cara versao 2 ,por que ele ja crio uma versao 
 e entao volta para o inicio UNMODIFIED como versao 2 
-podemos fazer novas modificaoes e seguir todo o processo ate que seja criado uma nova versao, isso e o controle de versoes.
+podemos fazer novas modificaoes e seguir todo o processo 
+ate que seja criado uma nova versao, isso e o controle de versoes.
 ```
 # CRIANDO ARQUIVOS DENTRO DO REPOSITORIO GIT -passo a passo de como acontece o versionamento.( CICLO DE VIDA DOS ARQUIVOS )
 
@@ -102,9 +117,11 @@ o arquivo foi criado dentro da pasta e vamos ver o git status
 ![](imagens/003.png)
 
 ```
-como apenas criamos um arquivo , mas nao modificamos nada nele vai mostrar que o arquivo estar em UNTRACKED** = não marcado
+como apenas criamos um arquivo , mas nao modificamos nada 
+nele vai mostrar que o arquivo estar em UNTRACKED** = não marcado
 
-se modificarmos o arquivo , tipo escrever algo dentro do arquivo que foi criado , e em seguida dar outro ***git status*** vai mostrar outro ESTADO
+se modificarmos o arquivo , tipo escrever algo dentro do arquivo 
+que foi criado , e em seguida dar outro ***git status*** vai mostrar outro ESTADO
 ```
 - ***git add*** = adiciona o arquivo ao staged
 
@@ -113,16 +130,21 @@ se modificarmos o arquivo , tipo escrever algo dentro do arquivo que foi criado 
 se digitar o ***git status*** agora o arquivo vai aparecer no staged (new file)foi adicionado ao git e esta preparado para commitar
 
 ```
-Se nesse momemto for feito uma modificacão no arquivo que acabou de ser adicionado o git vai rastrear essa modificacão
-se digitar ***git status*** novamente, ele agora vai aparecer com a mensagem (modified : nome do arquivo)![](imagens/005.png) 
+Se nesse momemto for feito uma modificacão no arquivo que acabou 
+de ser adicionado o git vai rastrear essa modificacão
+se digitar ***git status*** novamente, ele agora vai 
+aparecer com a mensagem (modified : nome do arquivo) 
 ```
+![](imagens/005.png)
+
 Esta preste a ser commitado , mas houve a alteracão, então ele mostra a modificacão >>> nesse caso é necessário fazer outro ***git add*** e entao o arquivo estara pronto para commmit
 
 - ***git commit -m "mensagem sobre o commit"*** = o git vai criar uma imagem do arquivo (snapshot) uma versão.
 
 ```
 ***-m " "***
-usar sempre o campo de comentário para deixar registrado que tipo de modificacão você fez no arquivo. isso ajuda a identificar o historico dos commits e acompanhar o que esta sendo feito no projeto.
+usar sempre o campo de comentário para deixar registrado que tipo de modificacão
+ você fez no arquivo. isso ajuda a identificar o historico dos commits e acompanhar o que esta sendo feito no projeto.
 ```
 apos o commmit é gerado algumas informacões para acompanhar e fazer possiveis modificacões nos commits futuramente.
 ![](imagens/006.png)
@@ -136,20 +158,27 @@ apos o commmit é gerado algumas informacões para acompanhar e fazer possiveis 
 
 4-mostra quantos arquivos foram commitados 
 
-5-e se houve alguma insercão/modificacões nesse arquivo depois que ele foi adicionado pelo __ git add __ vai aparecer quantas vezes o arquivo foi modificado.
+5-e se houve alguma insercão/modificacões nesse arquivo depois que ele 
+foi adicionado pelo __ git add __ vai aparecer quantas vezes o arquivo foi modificado.
 ```
 e depois de fazer o commit ,se dermos um ***git status*** vamos ver que nao existe mais arquivos para trabalhar, vai informar que area de trabalho do diretorio está limpa.
 ![](imagens/007.png)
 
 ```
-NAO HÁ NADA PARA SER FEITO, POR QUE? as mudancas que foram feitas já foram salvas , então acontece o retorno do arquivo para o inicio do processo como um arquivo tipo versao 2 (com todas as modificacões que eu fiz) Nova versão [versionamento o proposito do git]
+NAO HÁ NADA PARA SER FEITO, POR QUE? as mudancas que foram feitas já foram salvas
+então acontece o retorno do arquivo para o inicio do processo como um arquivo 
+tipo versao 2 (com todas as modificacões que eu fiz) Nova versão [versionamento o proposito do git]
 ```
 
 Se eu fizer novas modificacoes ele vai seguir o mesmo processo 
 ![](imagens/008.png) 
 
 ```
-teremos que adicionar com o ***git add*** e depois fazer o commit com o ***git commit*** para que essas novas alteracões sejam salvas numa nova versao do arquivo, tipo atualizacão de aplicativos que sempre voltam com novas funcionalidades. nesse caso o arquvio vai ser salvo com tudo que eu tiver feito de novo dentro dele . >>> esse é o CICLO do git.
+teremos que adicionar com o ***git add*** e depois fazer o commit com o 
+***git commit*** para que essas novas alteracões sejam salvas numa nova 
+versao do arquivo, tipo atualizacão de aplicativos que sempre voltam com 
+novas funcionalidades. nesse caso o arquvio vai ser salvo com tudo que eu 
+tiver feito de novo dentro dele . >>> esse é o CICLO do git.
 ```    
 
 Se tentarmos fazer um commit dessa nova modificacão logo em seguida que foi feito a modificacao sem antes dar o ***git add*** ele vai dar erro.
@@ -183,7 +212,8 @@ RESUMO DOS 4 CICLO
 ![](imagens/010.png) 
 
 ```
-e tras algumas informacoes sobre o autor do commit , data , existe tambem um ID que é usado para identificar o commit
+e tras algumas informacoes sobre o autor do commit ,data , 
+existe tambem um ID que é usado para identificar o commit
 ```
 ## Opcões que podem ser utilizadas no comando ***git log***
 
@@ -208,7 +238,8 @@ e tras algumas informacoes sobre o autor do commit , data , existe tambem um ID 
 ![](imagens/015.png)
 
 ```
-dentro do git log existe um ID de cada commit , é chamado de HASH (número que identifica o commit , cada commit tem um ID único)
+dentro do git log existe um ID de cada commit , é chamado de 
+HASH (número que identifica o commit , cada commit tem um ID único)
 ```
 ![](imagens/016.png)
 
@@ -241,7 +272,8 @@ COMANDO QUE PODEMOS VER AS MUDANCAS ANTES MESMO DE FAZER O COMMIT
 ![](imagens/018.png)
 
 ```
-Cada mudanca que fizermos , conseguimos olhar com o ***git diff*** antes de fazer o commit. MUITO IMPORTANTE !!! utilizar sempre o git diff antes de fazer um commit
+Cada mudanca que fizermos , conseguimos olhar com o ***git diff*** 
+antes de fazer o commit. MUITO IMPORTANTE !!! utilizar sempre o git diff antes de fazer um commit
 
 assim conseguindo dar uma última olhada no que foi feito antes de fazer o commit.
 é uma forma de dar uma revisada antes do commit para evitar de mandar um commit com algum erro 
@@ -251,12 +283,15 @@ assim conseguindo dar uma última olhada no que foi feito antes de fazer o commi
 - ***git diff --name-only*** = vai mostrar somente o nome do arquivo que foi modificado ![](imagens/019.png)
 
 ```
-Muito util quando existe uma quantidade enorme de commit , por que ele nao vai trazer informacões detalhadas de cada commit ,um grande log com todas as diferencas, apenas vai trazer a lista com o nome dos arquivos.
+Muito util quando existe uma quantidade enorme de commit , por que ele nao 
+vai trazer informacões detalhadas de cada commit ,um grande log com todas as 
+diferencas, apenas vai trazer a lista com o nome dos arquivos.
 ```
 ># DESFAZENDO COISAS COM O RESET
 
 ```
-Editando um arquivo e vendo que a mudanca que foi feita esta errada , como desfazer o que foi editado ?
+Editando um arquivo e vendo que a mudanca que foi feita esta errada 
+como desfazer o que foi editado ?
 ```
 ![](imagens/020.png)
 
@@ -267,7 +302,8 @@ e digitando o comando ***git diff*** novamente , não vai mostrar as alteracões
 
 editando e em seguida adicionando com ***git add*** , colocando o arquivo na area de Staged 
 ```
-Diferente do processo anterior que apenas editamos o arquivo e desfazemos as mudancas sem ter adicionado ao 'git add'
+Diferente do processo anterior que apenas editamos o arquivo 
+e desfazemos as mudancas sem ter adicionado ao 'git add'
 ```
 
 ![](imagens/022.png)
@@ -278,7 +314,8 @@ Como foi feito o passo do ***git add*** o git diff não ver o que foi modificado
 ![](imagens/023.png)
 
 ```
-Mostra que o arquivo foi retirado do Staged , e se for digitado git diff agora ele vai mostrar as modificacoes que foram feitas no arquivo.
+Mostra que o arquivo foi retirado do Staged , e se for digitado 
+git diff agora ele vai mostrar as modificacoes que foram feitas no arquivo.
 ```
 ![](imagens/024.png)
 
@@ -291,12 +328,14 @@ Editando o arquivo e commitando direto . esse git commit -***a***m "mensagem" es
 ![](imagens/026.png)
 
 ```
-Esta la nos log´s Registrado esse commit , so que eu nao quero que fique la , por que houve alguma informacão que foi errada.
+Esta la nos log´s Registrado esse commit , so que eu nao 
+quero que fique la , por que houve alguma informacão que foi errada.
 ```
 ![](imagens/027.png)
 
 ```
-COMO RESOLVER ISSO ? com o mesmo comando de git reset , e para esse caso existem 3 tipos 
+COMO RESOLVER ISSO ? com o mesmo comando de 
+git reset , e para esse caso existem 3 tipos 
 ```
 - ***git reset --soft*** =
 vai pegar as minhas modificacões e vai voltar os commits(matar o commit), mas o arquivo ja vai esta em Staged com a modificacao pronta para ser commitada dinovo
@@ -305,18 +344,29 @@ vai pegar as minhas modificacões e vai voltar os commits(matar o commit), mas o
 ![](imagens/029.png)
 
 ```
-Se for commitado novamente , e formos ver la no git log , o commit que esta constando , é esse ultimo que foi adicionado , so observarmos a mensagem qe foi passada que conseguimos notar que mudou o commit , o anterior foi resetado , nao consta no historico de commit's
+Se for commitado novamente , e formos ver la no git log , o commit 
+que esta constando , é esse ultimo que foi adicionado , so observarmos 
+a mensagem qe foi passada que conseguimos notar que mudou o commit , 
+o anterior foi resetado , nao consta no historico de commit's
 ```
 ![](imagens/030.png)
 ![](imagens/031.png)
 
 ```
-Aquele outro commit anterior sumiu e foi substituido por esse ultimo que fizemos novamente , o reset --soft faz isso (reseta o commit ) retira o commit do historico e o arquivo retorna em Staged ( que significa que não vamos precisar passar o comando git add novamente para aquele arquivo , por que ele continuar adicionado , o reset --soft simplesmente so mexeu no historico do commit , removendo ele do commit , mas as modificacões que foram feitas no arquivo ainda estão la )
+Aquele outro commit anterior sumiu e foi substituido por esse ultimo que 
+fizemos novamente , o reset --soft faz isso (reseta o commit ) retira o 
+commit do historico e o arquivo retorna em Staged ( que significa que não 
+vamos precisar passar o comando git add novamente para aquele arquivo , 
+por que ele continuar adicionado , o reset --soft simplesmente so mexeu 
+no historico do commit , removendo ele do commit , mas as modificacões 
+que foram feitas no arquivo ainda estão la )
 ```
 ![](imagens/032.png)
 
 ```
-Com o *git diff* podemos ver que realmente o arquivo ainda esta la com as modificacões que fiz , apenas voltou o commit , que não mais aparece no historico dos commits 
+Com o *git diff* podemos ver que realmente o arquivo ainda esta 
+la com as modificacões que fiz , apenas voltou o commit , que 
+não mais aparece no historico dos commits 
 ```
 - ***git reset --mixed*** =
 vai pegar as minhas modificacões e vai voltar os commits, mas so que vai voltar os arquivo para antes do Staged , é necessario adicionar o arquivo no Staged com o ***git add*** as modificacões que foram feitas no arquivo estao la , mas o arquvio nao está  adicionado  
@@ -326,9 +376,11 @@ vai pegar as minhas modificacões e vai voltar os commits, mas so que vai voltar
 ```
 A diferenca do --soft para --mixed é que :
     
---Soft = vai voltar o arquivo , mas ele fica no Staged , ja adicionado com o 'git add'
+--Soft = vai voltar o arquivo , mas ele fica no Staged 
+, ja adicionado com o 'git add'
 
---Mixed = vai voltar o arquivo para antes do Staged , é preciso adicionalo aos Staged com o 'git add' 
+--Mixed = vai voltar o arquivo para antes do Staged , 
+é preciso adicionalo aos Staged com o 'git add' 
 ```
 - ***git commit --hard*** =
 Vai simplesmente ignorar a existencia daquele commit , vai matar tudo daquele commit e as modificacoes
@@ -341,13 +393,19 @@ O arquivo foi commitado e agora vamos reseta-lo com --hard e ver o resultado
 ![](imagens/036.png)
 
 ```
-Apos fazer o 'git Reset --hard' , o commit sai do Histórico e se dermos um 'git status' nao existe mais o arquivo nem no Staged adicionado ,e nem Antes do Staged para ser adicionado , as modificacões tambem foram desconsideradas, é necessario fazer as modificacões novamente para que o git rastreie as mudancas que fizermos.
+Apos fazer o 'git Reset --hard' , o commit sai do Histórico e se 
+dermos um 'git status' nao existe mais o arquivo nem no Staged 
+adicionado ,e nem Antes do Staged para ser adicionado , as modificacões 
+tambem foram desconsideradas, é necessario fazer as modificacões novamente 
+para que o git rastreie as mudancas que fizermos.
 ```
 ![](imagens/037.png)
 ```
-Diferente das outras 2 formas , o git hard , vai desfazer tanto o commit , como retirar o arquivo do rastreamento do git , desfazendo as modificacoes. 
+Diferente das outras 2 formas , o git hard , vai desfazer tanto o commit 
+, como retirar o arquivo do rastreamento do git , desfazendo as modificacoes. 
 
-Muito importante , vai facillitar agente poder voltar em alguns historicos que houve erros , evitando subir coisas erradas no arquivo.
+Muito importante , vai facillitar agente poder voltar em alguns 
+historicos que houve erros , evitando subir coisas erradas no arquivo.
 ```
 
 >>TER CUIDADO !! O git reset alterado o Historico do commit.
@@ -362,7 +420,8 @@ matou o commit e quer subir novamente o git vai identificar que existe uma difer
 ```
 Todas as vezes que fazemos um commit, o git cria uma HASH e faz uma Snapshot 
 
-O Branch aponta para o commit, a primeira branch que vamos ter é a master e cada vez que vamos fazendo um commit ele vai seguindo o commit.
+O Branch aponta para o commit, a primeira branch que vamos ter é 
+a master e cada vez que vamos fazendo um commit ele vai seguindo o commit.
 
 ![](imagens/061.png)
 
@@ -473,8 +532,10 @@ Evita commits extras - os commits que existirem sempre vai ter o sentido de adi�
 
 Histórico Linear - vai sempre criar uma linha reta ( não vai ter varios apontamentos )
 
-Perde a ordem cronologica - acaba mudando o Histórico por que pega o commit e vai sempre colocando na frente da fila não levando em conta se o commit foi feito antes ou depois.
-e essa mudança de historico pode dar conflito quando outra pessoa for subir o codigo dela por conta do historico esta diferente.
+Perde a ordem cronologica - acaba mudando o Histórico por que pega o commit e vai sempre 
+colocando na frente da fila não levando em conta se o commit foi feito antes ou depois.
+e essa mudança de historico pode dar conflito quando outra pessoa for subir o codigo 
+dela por conta do historico esta diferente.
 ```
 ![](imagens/075.png)
 
@@ -549,11 +610,14 @@ NO REPOSITÓRIO O GITHUB SEMPRE LIBERA UM ENDEREÇO , COM ESSE ENDEREÇO CONSEGU
 
 O que o fork faz ?
 ```
-É a possibilidade que o github dar ao usuario de pegar um repositorio que não é seu e fazer um copia do projeto e ajudar a contribuir fazendo modificações no codigo.
+É a possibilidade que o github dar ao usuario de pegar um repositorio que não 
+é seu e fazer um copia do projeto e ajudar a contribuir fazendo modificações no codigo.
 
 1 - faço um fork 
 
-2-  e depois de fazer as mudanças eu posso enviar um pull request para o dono do repositório mostrando as modificações que eu fiz , e o dono avalia as mudançcas e aprova ou não as modificações para o projeto principal.
+2-  e depois de fazer as mudanças eu posso enviar um pull request para o 
+dono do repositório mostrando as modificações que eu fiz , e o dono avalia as 
+mudançcas e aprova ou não as modificações para o projeto principal.
 ```
 
 Qual a diferença do Fork para o Clone ?
@@ -561,9 +625,11 @@ Qual a diferença do Fork para o Clone ?
 No clone eu so consigo fazer para os meus repositorios,que são meus de fato e que depois eu posso mandar as modificações para o meu repositório.
 
 ```
-Se eu não for dono do repositório eu posso até clonar, mas se eu fizer alguma modificação eu não vou conseguir enviar, por que o repoitório não é meu.
+Se eu não for dono do repositório eu posso até clonar, mas se eu fizer 
+alguma modificação eu não vou conseguir enviar, por que o repoitório não é meu.
 
-então quando eu quero fazer uma modificação em algo que não é meu eu faço um fork e então vou poder enviar as modificações que eu fizer atraves de um pull request.
+então quando eu quero fazer uma modificação em algo que não é meu eu faço 
+um fork e então vou poder enviar as modificações que eu fizer atraves de um pull request.
 ```
 ![](imagens/057.png)
 ![](imagens/058.png)
