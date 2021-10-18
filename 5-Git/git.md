@@ -1,5 +1,4 @@
 # CONTROLE DE VERSÃO - GIT E GITHUB
->>> ( Curso base das anotacoões ) (https://www.udemy.com/course/git-e-github-para-iniciantes/learn/lecture/5120486#overview)
 
 ![](imagens/gitXgithub.png)
 ># CONCEITO git - Repositorio local
