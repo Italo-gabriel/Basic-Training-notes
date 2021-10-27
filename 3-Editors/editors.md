@@ -170,6 +170,5 @@ mais completo para desenvolver codigos
 
 ![] (https://onebitcode.com/visual-studio-code/)
 
-![] (https://www.udemy.com/course/truques-vscode/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Webindex_Catchall_la.PT_cc.BR&utm_term=_._ag_114148736799_._ad_485704569545_._de_c_._dm__._pl__._ti_dsa-525138004927_._li_1001625_._pd__._&gclid=CjwKCAjwndCKBhAkEiwAgSDKQQMkFbZik9QOuKPIjv9XseWUuzZk3ADGa40dtDcLG7-TJCGIuefx1hoC_fMQAvD_BwE)
-
+![] (https://www.udemy.com/course/truques-vscode/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Webindex_Catchall_la.PT_cc.BR&utm_term=
 

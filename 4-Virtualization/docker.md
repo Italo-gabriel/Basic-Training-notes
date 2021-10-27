@@ -245,6 +245,7 @@ OPEREACIONAIS, COMO FUNCIONA NAS VM'S
 **O QUE é O DOCKER ?**
 
 Docker inc.( Empresa ) antes se chamava DotCloud
+
 ![](imagens/013.png)
 
 

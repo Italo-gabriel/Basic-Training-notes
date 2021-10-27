@@ -51,8 +51,19 @@ também pastas de funcionamento do próprio sistema linux.
 
 - ***'nome do comando' --manual*** = traz o manual do comando com as opcões.
 
-- ***alias 'NomeQueDesejaUsar'='NomeAtualdoComando' / com isso modificamos o comando*** = vai dar um nome ao comando ,podemos através desse comando mudar o comando e personalizá-lo.
+- ***alias 'NomeQueDesejaUsar'='NomeAtualdoComando' / com isso modificamos o comando*** = vai dar um nome ao comando ,podemos através desse comando mudar o comando e personalizá-lo. 
 
+```
+Para modificar esse arquivo temos que ir em /home/me/.bashrc  ou  ~/.bashrc
+e abrir com um editor de codigo ou VScode ou Sublime
+
+para arbir com o VScode = code ~/.bashrc
+para abrir com o Sublime = osub ~/.bashrc
+
+colocamos o alias dentro desse arquivo e salvamos as modificações , 
+e pronto !!  o arquivo agora contem o comando modificado/personalizado.
+
+```
 ># 2 Tópico - Conhecendo o terminal Linux e seus atalhos
 
 >>**ATALHOS PARA UTILIZAR DENTRO DO TERMINAL**
