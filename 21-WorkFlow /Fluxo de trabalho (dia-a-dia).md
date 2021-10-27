@@ -143,4 +143,4 @@ Dica do Git Stash !!
     - ***g stash 'numero Identificaçao'*** (para entrar em algum stash especifico)
     - ***g stash apply*** ( vai aplicar as últimas informações que foram guardadas)
 
-![Documentação de todo o Fluxo](https://liferay.atlassian.net/wiki/spaces/ENGWORKFLOW/pages/1595212576/Workflow+Automation+Guide#Workflow-Tests-Overview)
+![Documentação de todo o Fluxo detalhado](https://liferay.atlassian.net/wiki/spaces/ENGWORKFLOW/pages/1595212576/Workflow+Automation+Guide#Workflow-Tests-Overview)
