@@ -109,7 +109,7 @@ se dermos o comando ***git status*** = vai mostrar que nao existe nada ainda par
 
 não existe nenhum arquivo ainda no repositorio local.
 
-***touch "nome do arquivo"*** = criar um arquivo vazio 
+- ***touch "nome do arquivo"*** = criar um arquivo vazio 
 o arquivo foi criado dentro da pasta e vamos ver o git status
 
 - ***git status*** = vai mostrar o ESTADO que o arquivo se encontra
@@ -440,10 +440,10 @@ Ou pode ser feito também uma outra Branch apontando para outro commit
 VANTAGENS
 
 ```
-1 Poder modificar sem alterar o local principal (master)
-2 Facilmente "desligável"  pode criar vários brnachs e pode apagar com muita  facilidade
-3 Multiplas pessoas trabalhando em diferentes branchs, sem ninguem atrapalhar ninguem
-4 Evita conlfitos
+1- Poder modificar sem alterar o local principal (master)
+2- Facilmente "desligável"  pode criar vários branchs e pode apagar com muita  facilidade
+3- Multiplas pessoas trabalhando em diferentes branchs, sem ninguem atrapalhar ninguem
+4- Evita conflitos
 ```
 Se estiver várias pessoas trabalhando numa unica branch , eu posso fazer um commit agora e logo em seguida mais 25 pessoas fazem um commit na mesma hora.
 
@@ -551,7 +551,6 @@ MERGE = junta criando um novo commit (commit extra)
 REBASE = junta jogando o commit pra frente ( pega tudo que estiver no branch separado e coloca no começo da fila)
 ```
 
-
 ># TRABALHANDO COM GITHUB - REPOSITORIO REMOTO
 
 CONCEITO - é um repositório remoto onde podemos guardar os nossos codigos versionados no git. É um tipo de rede social para compartilharmos os nossos codigos.
@@ -632,10 +631,100 @@ então quando eu quero fazer uma modificação em algo que não é meu eu faço
 um fork e então vou poder enviar as modificações que eu fizer atraves de um pull request.
 ```
 ![](imagens/057.png)
+
 ![](imagens/058.png)
+
 ![](imagens/059.png)
+
 ![](imagens/060.png)
 
+> # SEÇÃO EXTRA
 
+> Criando o arquivo .gitignore 
 
+![Documentação] https://git-scm.com/docs/gitignore
 
+Dentro do .gitignore podemos salvar tanto um padrão de extensão como um arquivo especifico diretamente que queremos ignorar
+
+![Padrões.gitignore] https://github.com/github/gitignore
+
+> Utilizando o git stash
+
+ - ***git stash*** = Serve para guardar modificações que ainda não foram commitadas e que pode ser chamado quando achar que for necessário para continuar as modificações. 
+
+![](imagens/076.png)
+
+ ```
+ vamos supor que precise criar uma nova branch e não quero levar essa modificação comigo para a nova branch, então precisamos dar um git stash para guardar as modificações.
+ ```
+
+![](imagens/077.png)
+
+![](imagens/078.png)
+
+```
+E VAMOS SUPOR QUE AS COISAS QUE EU TINHA GUARDADO FORAM FINALIZADAS E EU QUERO TRAZER AS MODIFICAÇÕES PARA A BRANCH . ENTAO PODEMOS UTILIZAR O GIT STASH APPLY
+```
+
+- ***git stash apply*** =  tras as modificações que foram  guardadas com o git stash. e vai aplicar as mudanças que eu tinha guardado
+
+![](imagens/079.png)
+
+- ***git stash list*** = vai mostrar a lista das coisas que eu guardei com o git stash 
+
+- ***git stash clean*** =  Limpa tudo que estiver no stash, para não deixar nenhuma modificação guardada
+
+MUITO UTIL QUANDO PRECISAMOS DAR UM PULL(ATUALIZAR O REPOSITORIO LOCAL E AINDA TEM ARQUIVOS SENDO TRABALHADOS E QUE NÃO QUERO DAR UM COMMIT NELES). é so dar um git stash , faz a atualização com git pull , e depois é so trazer as modificações guardadas com o git stash apply.
+
+> Criando atalhos para os comandos (alias)
+
+- ***git config --global alias.s status*** = vai criar um atalho para o status - utilizando a letra 's'
+- ***git config --global alias.'nome do atalho' 'nome do comando original(extenso)*** = sintaxe de atalhos ALIAS
+
+![](imagens/080.png)
+
+Ou pode também abrir o arquivo .bashrc e modificar dentro dele os atalhos que desejamos utilizar para cada comando.
+
+![](imagens/081.png)
+![](imagens/082.png)
+
+> Versionando com tags
+
+- ***git tag -a 'versão 1.0.0' -m "anotação"*** = cria uma tag para os projetos 
+
+- ***git push origin master --tags*** = Leva as tags criadas para o repositorio remoto
+
+![](imagens/083.png)
+
+![](imagens/084.png)
+
+![](imagens/085.png)
+
+> Utilizando o git revert
+
+***git revert "HASH commit"*** = Vai reverter o commit , o arquivo volta apagado o que tinha feito (modificado ) , mas no historico de commit fica o registro do commit
+
+QUAL A UTILIDADE DO REVERT ?
+
+```
+Vamos supor que estamos trabalhando num grande projeto e subimos 
+algo que quebrou em produção , se for feito um git reset  
+eu perderia tudo que eu fiz , e vamos supor que eu quero 
+continuar trabalhando com o codigo, por que apenas algo esta errado e nao todo o codigo.
+
+entao eu utilizo o git revert que ele vai reverte as minhas mudanças , 
+vai trazer o codigo anterior antes de quebrar e eu posso trabalhar nesse codigo novamente.
+```
+ENTAO O GIT REVERT SERVE PARA ISSO 
+
+```
+para não perder do meu historico as mudanças que eu fiz , diferente do 
+git reset que apaga o historico dos commits e eu não posso ter acesso mais.
+```
+> Apagando tags e Branchs Remotos
+
+- ***git push : 'versao tag' ou 'nome da branch'*** =  Apaga as tags e Branchs do repositorio remoto
+
+- ***git tag*** = Lista as tags existentes
+
+- ***git tag -d 'versão'*** =  apaga as tags Locais 
