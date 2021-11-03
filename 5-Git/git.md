@@ -728,3 +728,18 @@ git reset que apaga o historico dos commits e eu não posso ter acesso mais.
 - ***git tag*** = Lista as tags existentes
 
 - ***git tag -d 'versão'*** =  apaga as tags Locais 
+
+># Links extras (Bibliografia)
+
+- ![] (https://www.udemy.com/course/git-e-github-para-iniciantes/)
+- ![] (https://www.treinaweb.com.br/blog/git-merge-e-git-rebase-quando-usa-los)
+- ![] (https://git-scm.com/doc)
+- ![] (https://learngitbranching.js.org/?locale=pt_BR)
+- ![] (https://www.hostinger.com.br/tutoriais/?s=git)
+- ![] (https://www.hostinger.com.br/tutoriais/?s=git+comandos)
+- ![] (https://www.youtube.com/watch?v=_LOLnJJG1-c)
+- ![] (https://www.youtube.com/watch?v=rO0rGdROvyw&list=PL-R1FQNkywO4TWbgXoKI_VpIgWfJdipAD)
+- ![] (https://www.youtube.com/watch?v=FF1f4bKYhoo&list=PLbEOwbQR9lqzK14I7OOeREEIE4k6rjgIj)
+- ![] (https://www.youtube.com/watch?v=kB5e-gTAl_s)
+- ![] (https://www.youtube.com/watch?v=OuOb1_qADBQ&t=21s)
+- ![] (https://www.youtube.com/watch?v=YnVnFanIAzU&list=PL1djpiWx-IXwf5Qxqb8hH9SVXPkkYpWWU)
