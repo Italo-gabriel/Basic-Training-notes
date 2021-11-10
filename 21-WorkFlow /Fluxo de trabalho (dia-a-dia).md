@@ -80,19 +80,33 @@ ou utilizar o comando de [***ps aux | grep java***] - **para ver os Processos em
 **Fluxo do pull request** (apos finalizar o teste no mesmo dia que iniciou)
 
 cdt
+
 git status
+
 git clean . -f 
+
 git add . ou <file>
+
 git  commit -m <LRQA-XXXX Add 'NomeQueVemDepoisDo#' test>
+
 cd portal-impl
+
 afcb
+
 aflc
+
 cd ..
+
 runPoshiValidation 
+
 git status
+
 git add . <file>
+
 git commit -m "LRQA-XXXX SF"
+
 git log (verificar seus commits - acima da master)
+
 gpr submit -u <id> (Ex.: lucasperj)
 
 > # Ordenando os arquivos no GitHub e no Jira Após o Pull Request 
