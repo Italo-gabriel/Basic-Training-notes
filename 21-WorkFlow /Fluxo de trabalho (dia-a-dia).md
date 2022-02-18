@@ -1,4 +1,4 @@
-> # Subindo o portal e rodando o Banco de dados no Docker
+># Subindo o portal e rodando o Banco de dados no Docker
 
 1- Baixando a Imagem do MYSQL
 - ***d run --name galatians -d -e MYSQL_ROOT_PASSWORD=lovethepoor -p 3306:3306 mysql:8.0.22.*** (Baixa a imagem do MYSSQL)
@@ -14,7 +14,7 @@
 - ***d start galatians*** (rodar o banco de dados no Deocker)
 - ***c*** (subir o catalina) [alias] c="~/dev/bundles/master/tomcat-9.0.53/bin/catalina.sh jpda run"
 
-> # Preparando o ambiente de trabalho (fluxo de trabalho inicial)
+># Preparando o ambiente de trabalho (fluxo de trabalho inicial)
 
 1- Entrando no repositório do Portal e refazendo o catalina
 - ***cdt*** (ir para o repositório liferay-portal)
@@ -107,6 +107,11 @@ git commit -m "LRQA-XXXX SF"
 
 git log (verificar seus commits - acima da master)
 
+g rebase -i master
+"i -insert"
+"f-fixup" no commit do SF
+esc ":wq" para salvar e mesclar os dois commits num unico
+
 gpr submit -u <id> (Ex.: lucasperj)
 
 > # Ordenando os arquivos no GitHub e no Jira Após o Pull Request 
@@ -126,7 +131,7 @@ gpr submit -u <id> (Ex.: lucasperj)
 
 ># Fluxo de trabalho de um dia para o outro (caso o teste não finalize no mesmo dia e tenha que guardar as informações)
 
-1- salva as informações na branch ***Crtl + s*** e continua no outro dia 
+1- salva as informações na branch ***git stash*** e continua no outro dia 
 
 **No dia seguinte segue o fluxo**
 
@@ -149,7 +154,7 @@ gpr submit -u <id> (Ex.: lucasperj)
 - ***g rebase master*** (traz as atualizações que foram baixadas para a branch)
 - ***g stash apply*** (Dentro da branch que estava trabalhando aplica as informações que foram arquivadas)
 
-- ***g clean . -f*** (apaga os arquivos que aparecem do selenium, para nõa mandar junto na hora de commitar)
+- ***g clean . -f*** (apaga os arquivos que aparecem do selenium, para não mandar junto na hora de commitar)
 - ***code .*** ( vamos para o code e continuamos de onde paramos)
 
 Dica do Git Stash !!

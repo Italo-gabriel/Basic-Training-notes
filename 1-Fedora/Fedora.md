@@ -64,6 +64,7 @@ colocamos o alias dentro desse arquivo e salvamos as modificações ,
 e pronto !!  o arquivo agora contem o comando modificado/personalizado.
 
 ```
+
 ># 2 Tópico - Conhecendo o terminal Linux e seus atalhos
 
 >>**ATALHOS PARA UTILIZAR DENTRO DO TERMINAL**

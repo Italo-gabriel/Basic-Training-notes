@@ -103,6 +103,7 @@ ESTA UTILIZANDO AGORA AS CHAVES QUE FORAM SINCRONIZADAS. chave publica no Autori
 
 ># 3 TÓPICO - SFTP
 
+
 ![](imagens/005.png)
 
         O que é SFTP ?
@@ -124,8 +125,8 @@ SFTP, ou SSH File Transfer Protocol, é uma maneira muito mais segura de mover a
 
 ![] (https://www.hostinger.com.br/tutoriais/como-usar-sftp-ssh-file-transfer-protocol)
 
-![] (https://linux.die.net/man/1/sftp
-)
+![] (https://linux.die.net/man/1/sftp)
+
 ># 4 TÓPICO - Rsync
 
 ![](imagens/006.png)![](imagens/007.xcf)

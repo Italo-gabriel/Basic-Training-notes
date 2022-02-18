@@ -60,3 +60,27 @@ ALTO NIVEL - vai focar na Interface de Usuário (USABILIDADE) caixa-preta.
 ![](imagens/005.png)
 
 >>**Regra 10 de Myers**
+
+Esta regra trata a respeito do custo da correção de Defeitos no Processo de desenvolvimento de um Software
+
+![](imagens/006.png)
+
+Quanto mais próximo da Produção, mais caro o custo das Correções.
+
+![](imagens/007.png)
+
+>>**Mitos sobre os testes de software**
+
+- Está errado pensar que não se tem tempo para testar -
+- Testar é escrever o Dobro de código - mas é necessário para o desenvolvimento 
+- Se fizer o código certinho não precisa de teste - errar tudo bem. o Problema é não testar
+- Testar é papel do testador - também é papel do desenvolvedor
+- Que adianta eu testar se o resto da equipe não testa - testando voce consegue melhores resultados , e ao seu codigo vai falhar menos
+- Os testes garantem 100% de software livre de erros - náo basta ter teste , tem que saber escrever testes
+- se passou no teste é por que não tem bug - é necessario testar o cenário que dar certo e tambem ver o cenario que dar erro para ver realmente dando erro
+- Eu ja terminei só falta testar - só termina o projeto quanto os testes são implementados junto com o desenvolvimento
+- Testes de unidade só funcionam se for com TDD - testes feitos antes do código
+- Testar manualmente é mais produtivo - as vezes é necessario uma equipe de teste maior para testar de ponta a ponta a aplicação
+- Não consigo convencer meu gerente - Mostrar a regra de 10 de Myers e explica o quanto que a empresa pode ter problema se deixar para corrigir os erros em produção.
+
+>>**Tipos de testes mais comuns**

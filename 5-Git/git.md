@@ -584,7 +584,7 @@ CONCEITO - é um repositório remoto onde podemos guardar os nossos codigos vers
 
 - ***git remote -v*** = vai mostrar a qual conta foi ligado e qual o repositorio
 
-- ***git push - u origin master*** = esse comando vai enviar os arquivos para o repositorio Remoto.
+- ***git push -u origin master*** = esse comando vai enviar os arquivos para o repositorio Remoto.
 
 ![](imagens/049.png)
 
