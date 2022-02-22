@@ -673,12 +673,13 @@ se caso der algum erro de Dependencias usar o comando com a opção [--nodeps]
 PODE SER UTILIZADO TANTO O COMANDO [YUM] OU [DNF]
 ```
 
-- ***sudo yum install 'NomedoPacote'*** = instalacao do pacote [instalação do programa]
+- ***sudo yum install ou sudo dnf install 'NomedoPacote'*** = instalacao do pacote [instalação do programa]
 
-- ***sudo yum update 'NomedoPacote'*** = atualização do pacote
+- ***sudo yum update ou sudo dnf update 'NomedoPacote'*** = atualização do pacote
 
-- ***sudo yum remove 'NomedoPacote'***
+- ***sudo yum remove ou sudo dnf remove 'NomedoPacote'***
 
+Os dois comando funcionam , mas o dnf esta sendo implementado para substituir o yum
 ```
 RESUMO DOS COMANDOS
 ```

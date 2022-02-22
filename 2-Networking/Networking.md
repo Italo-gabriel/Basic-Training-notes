@@ -136,7 +136,7 @@ O Rsync é uma ferramenta de sincronização habilitada em rede ,muito utilizada
 
 - ***rsync -av /home/me/'NomeDoArquivoOuPasta' me@192.168.xxx.xxx:/home/me*** = do meu pc para o computador do vizinho.
 
-- ***rsync -av me@192.168.xxx.xxx:/home/me/'NomeDoArquivoOuPasta' /home/me*** = do meu pc do vizinho para a minha maquina.
+- ***rsync -av me@192.168.xxx.xxx:/home/me/'NomeDoArquivoOuPasta' /home/me*** = do pc do vizinho para a minha maquina.
 
 ![mais informações] (https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-pt)
 
