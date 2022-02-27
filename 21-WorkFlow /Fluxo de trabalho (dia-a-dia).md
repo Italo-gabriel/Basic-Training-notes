@@ -114,6 +114,12 @@ esc ":wq" para salvar e mesclar os dois commits num unico
 
 gpr submit -u <id> (Ex.: lucasperj)
 
+# Resolvendo problemas num PR que ja foi enviado , e enviando as modificações
+
+para enviar novamente
+
+*g push origin 'LRQA-XXXX - f* = ccodnassim ele manda as modificações para a branch com todas as atualizações
+
 > # Ordenando os arquivos no GitHub e no Jira Após o Pull Request 
 
 **Fluxo do Github**

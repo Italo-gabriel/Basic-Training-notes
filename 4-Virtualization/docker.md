@@ -1,5 +1,4 @@
 ># DOCKER - VIRTUALIZAÇÃO E CONTAINERS
-(Curso base das anotacoões)  https://web.digitalinnovation.one/course/introducao-a-orquestracao-de-conteineres-com-docker/learning/c85d8e63-3431-4769-8d8d-39b019ad979f/
 
 ># 1 Tópico - Introdução ao tema Conceitos iniciais
 
