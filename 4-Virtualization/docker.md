@@ -287,7 +287,7 @@ Docker inc.( Empresa ) antes se chamava DotCloud
 
 **DOCKER-COMPOSE**
     e uma ferramenta para crias multiplos container com um simples comando.
-    ![como tudo funciona] (imagens/01.png)
+    ![como tudo funciona](imagens/01.png)
 
 `Continuar as Anotações`
 
