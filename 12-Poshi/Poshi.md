@@ -148,8 +148,7 @@ Navigator.openURL();
 ProductMenu.gotoPortlet(
 	category = "Content",
 	panel = "Site Administration",
-	portlet = "Blogs"
-);
+	portlet = "Blogs");
 
 ...
 

@@ -129,12 +129,14 @@ SFTP, ou SSH File Transfer Protocol, é uma maneira muito mais segura de mover a
 
 ># 4 TÓPICO - Rsync
 
-![](imagens/006.png)![](imagens/007.xcf)
+![](imagens/006.png)![](imagens/007.png)
 
         O que é o Rsync?
 O Rsync é uma ferramenta de sincronização habilitada em rede ,muito utilizada Devido à sua onipresença em sistemas Linux e do tipo Unix, além da sua popularidade como uma ferramenta para scripts de sistema, ela é incluída na maioria das distribuições Linux por padrão.
 
-- ***rsync -av /home/me/'NomeDoArquivoOuPasta' me@192.168.xxx.xxx:/home/me*** = do meu pc para o computador do vizinho.
+- ***rsync -av /home/me/'NomeDoArquivoOuPasta' me@192.168.xxx.xxx: /home/me*** = do meu pc para o computador do vizinho - OBS ! vai pedir uma senha = colocar a senha do computador do vizinho para liberar o acesso 
+
+- *rsync -azP /home/me/'NomeDoArquivoOuPasta' me@192.168.xxx.xxx: /home/me/'NomeDoLocalDestino'* = ver a barra de status da transferencia
 
 - ***rsync -av me@192.168.xxx.xxx:/home/me/'NomeDoArquivoOuPasta' /home/me*** = do pc do vizinho para a minha maquina.
 

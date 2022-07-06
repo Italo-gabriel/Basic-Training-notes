@@ -21,13 +21,13 @@
 - ***ant clean*** (limpar o banco)
 - ***ant all*** (refazer o portal no catalina )
 
-Observação !!
+`Observação !!`
 
 se der algum erro após refazer o portal ,fazer o passo 2 do - **Subindo o portal e rodando o Banco de dados no Docker**
 
 ou utilizar o comando de [***ps aux | grep java***] - **para ver os Processos em execução e poder para-los** 
 
-[***kill-9 'numero dos processos em execução do java***] para - **poder parar os processos e nao dar conflito com o banco de dados**
+[***kill-9 ou sudo kill-9 'numero dos processos em execução do java***] para - **poder parar os processos e nao dar conflito com o banco de dados**
 
 2- Atualizando os Repositórios local e remoto
 
@@ -89,6 +89,8 @@ git add . ou <file>
 
 git  commit -m <LRQA-XXXX Add 'NomeQueVemDepoisDo#' test>
 
+git log (verificar seus commits - acima da master)
+
 cd portal-impl
 
 afcb
@@ -110,15 +112,15 @@ git log (verificar seus commits - acima da master)
 g rebase -i master
 "i -insert"
 "f-fixup" no commit do SF
-esc ":wq" para salvar e mesclar os dois commits num unico
+esc ":wq!" para salvar e mesclar os dois commits num unico
 
-gpr submit -u <id> (Ex.: lucasperj)
+gpr submit -u <id> (Ex.: <Italo-gabriel>)
 
 # Resolvendo problemas num PR que ja foi enviado , e enviando as modificações
 
-para enviar novamente
+Para enviar novamente
 
-*g push origin 'LRQA-XXXX - f* = ccodnassim ele manda as modificações para a branch com todas as atualizações
+*g push origin 'LRQA-XXXX -f* = assim ele manda as modificações para a branch com todas as atualizações que foram feitas
 
 > # Ordenando os arquivos no GitHub e no Jira Após o Pull Request 
 
@@ -128,6 +130,8 @@ para enviar novamente
 (LRQA-xxxx Workflow Automated Test 'Nometeste') // o nome que fica depois do #//
 
 2- coloca link do ticket do jira anexado ao github // no canto onde fica os 3 pontinhos //
+
+3- Rodar o comando ci:test:sf ( no  comentário do commit )
 
 **Fluxo do Liferay issues (Jira)**
 
@@ -167,5 +171,8 @@ Dica do Git Stash !!
     - ***g stash list*** ( se precisar ver a lista com todos os arquivamentos que ja foram feitos)
     - ***g stash 'numero Identificaçao'*** (para entrar em algum stash especifico)
     - ***g stash apply*** ( vai aplicar as últimas informações que foram guardadas)
+    - ***g stash clear*** ( vai apagar todas as informações guardadas)
+    - ***g stash drop 'numero Identificaçao'*** ( vai apagar as informações daquele stash especifico)
 
 ![Documentação de todo o Fluxo detalhado](https://liferay.atlassian.net/wiki/spaces/ENGWORKFLOW/pages/1595212576/Workflow+Automation+Guide#Workflow-Tests-Overview)
+

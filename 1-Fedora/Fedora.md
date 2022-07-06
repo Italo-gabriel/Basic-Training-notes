@@ -437,6 +437,8 @@ a identidade daquele site , que no caso é o IP
 
 - ***seq '1 10'*** = imprime uma sequencia de números
 
+- ***curl wttr.in?lang=pt*** = tras a previsão do tempo no terminal em portugues
+
 ```
 RESUMO DOS COMANDOS
 ```
@@ -753,7 +755,7 @@ Use o comando cp para copiar arquivo do diretório atual em que você estiver. P
 O usuário habitual do comando mv é mover arquivos, ainda que ele possa também ser usado para renomear arquivos.
 
 Os argumentos neste comando é similar ao comando cp. Você precisa digitar mv, o nome do arquivo e o diretório de destino. Por exemplo: mv file.txt /home/username/Documents.  
-
+ 
 Já para renomear arquivos, a sintaxe é mv nomeantigo.ext nomenovo.ext. 
 
 - ***7. Comando mkdir***
@@ -897,7 +899,7 @@ Se você congelar seu terminal acidentalmente com o ***Ctrl + S***, simplesmente
 
 - ***Ctrl+W*** = apaga uma palavra na linha atual
 
-- **Ctrl+U*** = apaga a linha inteira
+- ***Ctrl+U*** = apaga a linha inteira
 
 - ***Ctrl + A***=  move você para o início da linha 
 
