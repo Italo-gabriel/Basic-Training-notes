@@ -289,11 +289,6 @@ Docker inc.( Empresa ) antes se chamava DotCloud
     e uma ferramenta para crias multiplos container com um simples comando.
     ![como tudo funciona](imagens/01.png)
 
-`Continuar as Anotações`
-
-># 2 Tópico - Primeiros passos com o Docker
-![](imagens/05.png)
-
 ># Bibliografia - Links Extras
 
 ![] (https://docker-curriculum.com/)
