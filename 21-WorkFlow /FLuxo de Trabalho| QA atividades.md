@@ -244,7 +244,7 @@ Para enviar novamente
 
 2- coloca também o index do testcase Anexado ao jira.
 
-# Fluxo de trabalho de um dia para o outro (caso o teste não finalize no mesmo dia e tenha que guardar as informações)
+# Fluxo de trabalho de um dia para o outro dia (caso o teste não finalize no mesmo dia e tenha que guardar as informações)
 
 1- salva as informações na branch **git stash** e continua no outro dia 
 
@@ -272,7 +272,7 @@ Para enviar novamente
 **g clean . -f** (apaga os arquivos que aparecem do selenium, para não mandar junto na hora de commitar)
 **code .** ( vamos para o code e continuamos de onde paramos)
 
-# Dica do Git Stash !!
+# Dica do Git Stash
 **g stash list** ( se precisar ver a lista com todos os arquivamentos que ja foram feitos)
 **g stash 'numero Identificaçao'** (para entrar em algum stash especifico)
 **g stash apply** ( vai aplicar as últimas informações que foram guardadas)

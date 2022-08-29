@@ -1,4 +1,4 @@
-# CONTROLE DE VERSÃO - GIT E GITHUB
+># CONTROLE DE VERSÃO - GIT E GITHUB
 
 ![](imagens/gitXgithub.png)
 ># CONCEITO git - Repositorio local
@@ -97,7 +97,7 @@ e entao volta para o inicio UNMODIFIED como versao 2
 podemos fazer novas modificaoes e seguir todo o processo 
 ate que seja criado uma nova versao, isso e o controle de versoes.
 ```
-# CRIANDO ARQUIVOS DENTRO DO REPOSITORIO GIT -passo a passo de como acontece o versionamento.( CICLO DE VIDA DOS ARQUIVOS )
+># CRIANDO ARQUIVOS DENTRO DO REPOSITORIO GIT -passo a passo de como acontece o versionamento.( CICLO DE VIDA DOS ARQUIVOS )
 
 ***mkdir*** = cria uma pasta
 
@@ -564,7 +564,7 @@ CONCEITO - é um repositório remoto onde podemos guardar os nossos codigos vers
 ---
 ![](imagens/040.png)
 
-> # CONFIGURACÕES INICIAIS 
+># CONFIGURACÕES INICIAIS 
 [Connecting to GitHub with SSH] https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
 
 >> CRIANDO E ADICIONANDO UMA CHAVE SSH
@@ -639,7 +639,7 @@ um fork e então vou poder enviar as modificações que eu fizer atraves de um p
 
 ![](imagens/060.png)
 
-> # SEÇÃO EXTRA
+># SEÇÃO EXTRA
 
 > Criando o arquivo .gitignore 
 
