@@ -1,8 +1,6 @@
-># DOCKER - VIRTUALIZAÇÃO E CONTAINERS
+>## 1 Tópico - Introdução ao tema Conceitos iniciais
 
-># 1 Tópico - Introdução ao tema Conceitos iniciais
-
->**O Porque de Utilizar o Docker - um Pouco Sobre a História dessa Tecnologia** 
+`O Porque de Utilizar o Docker - um Pouco Sobre a História dessa Tecnologia` 
 *  A evolução do host de aplicações (host=hospedagem, serviço que armazena os arquivos no servidor)  
 
 * Host significa "Hospedeiro" quem hospeda ou mantém uma Estrutura de tecnologia. (na Nuvem)  >> hospedagem de aplicações, serviços (SERVIDOR)
@@ -22,7 +20,7 @@ QUALQUER COMPUTADOR QUE ESTÁ LIGADO A OUTRAS MÁQUINAS ATRAVÉS DE CONEXÃO.
 
 ![](imagens/001.png)
 
->**Entendendo a Evolução do host de Aplicações e a causa do Surgimento do Docker (tecnologia de Container)**
+`Entendendo a Evolução do host de Aplicações e a causa do Surgimento do Docker (tecnologia de Container)`
 
 * Como era antigamente >>> várias Aplicações , vários servidores rodando com cada aplicação. 
 
@@ -36,7 +34,7 @@ QUALQUER COMPUTADOR QUE ESTÁ LIGADO A OUTRAS MÁQUINAS ATRAVÉS DE CONEXÃO.
 e como um projeto tem todas essa aplicações cada uma cuidando de uma parte do meu sistema inteiro, então para que elas se comunicassem era necessário a conexão entre elas , e isso era feito atraves de cabos de rede que permitem a comunicação na rede .( Uma rede para cada aplicação)
 ```
 
-Toda essa estrutura gera um custo
+`Toda essa estrutura gera um custo`
 
 1. um servidor por aplicação 
 2. um sistema operacional por servidor
@@ -48,7 +46,7 @@ Toda essa estrutura gera um custo
 (configuraçÕes e atualizações)
 ```
 
-Para manter toda essa estrutura funcionando , era necessario:
+`Para manter toda essa estrutura funcionando , era necessario:`
 
 * manutenção tanto da parte fisica Hardware (Hd -Memória - Processador)
 
@@ -62,7 +60,7 @@ por causa de todo esse processo o DePLOY de uma aplicação era muito lento (com
 O que é DePLOY ? quando vamos disponibilizar o sistema em um ambiente de desenvolvimento para testes ou em produção. ou quando colocamos na nuvem(servidor).
 ```
 
-Outros problemas com esse tipo de arquitetura : 
+`Outros problemas com esse tipo de arquitetura `
 
 ```
 capacidade da máquina (servidor) - pouco aproveitada
@@ -81,12 +79,12 @@ Para que o servidor continuasse funcionando quando tivesse muitos acessos simult
 Não era todo dia que isso acontecia , então ficava muuito tempo Ocioso, muitos Recursos desperdiçados.
 ```
 
-* melhorando a situação de um servido Ocioso , custo demorado e desperdicio de Recursos >>> SURGIU A VIRTUALIZAÇÃO.
+* Melhorando a situação de um servido Ocioso , custo demorado e desperdicio de Recursos >>> SURGIU A VIRTUALIZAÇÃO.
 
-
->**Melhorando a Situação : VIRTUALIZAÇÃO**
+`Melhorando a Situação : VIRTUALIZAÇÃO`
 
 Várias maquinas virtuais ( criar um computador dentro de outro de forma lógica , virtualizando o Sistema Operacional )
+
 ´
 ![](imagens/004.png)
 
@@ -129,11 +127,11 @@ CADA APLICAÇÃO VAI PEDIR UM SISTEMA OPERACIONAL >>> E TODO SISTEMA OPERACIONAL
 ```
 * ENTAO SURGIU OS CONTAINERS PARA MELHORAR A SITUAÇÃO DAS VIRTUAL MACHINE (V.M)
 
->**A Era dos Containers (DOCKER)**
+`A Era dos Containers (DOCKER)`
 
 ![](imagens/008.png)
 
->**O que é um Container ?**
+`O que é um Container`
 
 É o que vai conter a minha aplicação (container= contém)
 ```
@@ -163,7 +161,7 @@ Por que precisamos dos container's Fazendo essa separação para que cada aplica
 ```
 Por que não instalar todas as aplicações direto na máquina , Já que estamos usando o mesmo sistema Operacional
 ```
-**VAMOS ENTENDER**
+`VAMOS ENTENDER`
 
 O sistema operacional que usamos funciona da seguinte forma:
 
@@ -176,7 +174,7 @@ Os Problemas dessa Abordagem
 ```
 * Dois app's utilizando a mesma a porta de rede ? 
 
-***Apache x Nginix >>> os dois querendo utilizar a porta 8080***
+**Apache x Nginix >>> os dois querendo utilizar a porta 8080**
 
 O sistema Operacional não vai permitir utilizar a mesma (vai dar problema se não tiver alguém para separar uma da outra).
 
@@ -189,7 +187,7 @@ O aplicativo vai começar a travar o computador >> tomando todo o processamento 
 
 ![](imagens/011.png)
 
-O container serve para evitar esse tipo de situação 
+`O container serve para evitar esse tipo de situação`
 
 ```
 Onde uma aplicação pega todo o processamento da máquina para ela, travando o funcionamento dos demais aplicativos instalados.
@@ -203,9 +201,9 @@ Os container vão permitir fazer essas diferentes versões funcionarem, por que 
 
 ```
 
-Evitando a incompatibilidade e sendo possivel rodar várias versões de um tecnologia na mesma máquina, sem interferencias.
+`Evitando a incompatibilidade e sendo possivel rodar várias versões de um tecnologia na mesma máquina, sem interferencias.`
 
-o que muitas vezes seria impossivel de conseguir instalar direto na máquina (sem o isolamento dos Container's) Muitas vezes o sistema Operacional não permite ter várias versões de um mesmo programa , ele vai sempre tentar fazer uma atualização e acaba retirando a versão anterior.
+    O que muitas vezes seria impossivel de conseguir instalar direto na máquina (sem o isolamento dos Container's) Muitas vezes o sistema Operacional não permite ter várias versões de um mesmo programa , ele vai sempre tentar fazer uma atualização e acaba retirando a versão anterior.
 
 * A instalação de várias versões seria impossivel de rodar sem haver conflitos 
 
@@ -214,7 +212,7 @@ Mas o container resolvem esse problema , isolando uma aplicação da outra.
 ```
 ![](imagens/012.png)
 
->**O funcionamento dos container's Esquematizado**
+`O funcionamento dos container's Esquematizado`
 
 * Define o que vai ser utilizado em cada Aplicação ISOLADAMENTE
 * Limita o uso da CPU por App.( se chegar no limite não vai derrubar/travar os outros)
@@ -237,59 +235,19 @@ CONTAINER SÃO:
 * EVITA TER QUE CUIDAR DE DIVERSOS SISTEMAS 
 OPEREACIONAIS, COMO FUNCIONA NAS VM'S
 ```
-**O QUE O DOCKER FAZ?**
+`O QUE O DOCKER FAZ?`
 
 * Nos deixar trabalhar com container's, que é a melhor forma de se trabalhar com InfraEstrutura.
 
-**O QUE é O DOCKER ?**
+`O QUE é O DOCKER ?`
 
-Docker inc.( Empresa ) antes se chamava DotCloud
+* Docker inc.( Empresa ) antes se chamava DotCloud
 
 ![](imagens/013.png)
 
 
->**Arquitetura do Docker**
-
-**CONTAINER-IMAGE**
-    pacote com todas as dependencias que criam o nosso container
-
-**DOCKER-FILE**
-    arquivo de texto que contem todas as instrucoes para fazer o build da nossa imagem 
-
-![](imagens/02.png)
-
-**BUILD**
-    acao que cria uma imagem apartir do dockerfile , gera uma imagem aparti das instrucoes que foram passadas pelo dockerfile
-
-**CONTAINER**
-    e uma instancia na nossa imagem que representa uma execucao de uma aplicacao ou um processo ou um servico
-
-**VOLUMES**
-    permite que o nosso container armazene arquivos, dados em disco. se o container morrer as informacoes salvas no volume nao sao perdidas(persiste as informacoes no disco)
-
-**TAG** ajuda no versionamento das nossas imagens
-
-![](imagens/03.png)
-
-**MULTI-STAGE-BUILD**
-
-    multi estagios de build , podemos usar no momento do build uma imagem para compilar uma aplicacão e chama uma outra imagem que faz o running na nossa aplicacao 
-![](imagens/04.png)
-
-**REPOSITORY**
-    colecao de imagens (uma caixa com varias imagens)
-
-**REGISTRY**
-    servico que prover o acesso do nosso docker ao repositorio 
-
-**DOCKER-HUB**
-    repositorio publico para guardar as imagens(tanto publicas quanto privadas) produtos containeizados estao disponiveis no repositorio
-
-**DOCKER-COMPOSE**
-    e uma ferramenta para crias multiplos container com um simples comando.
-    ![como tudo funciona](imagens/01.png)
-
-># Bibliografia - Links Extras
+>## Links Extras Para Mais Informações 
+---
 
 ![] (https://docker-curriculum.com/)
 

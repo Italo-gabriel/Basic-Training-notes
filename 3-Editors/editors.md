@@ -1,11 +1,16 @@
 # EDITORES
 
 ># NANO = ***nano***
+---
 ![](imagens/001.png)
+
+`Mais Informações` 
 
 ![] (https://livreeaberto.com/guia-editor-nano)
 
 ># VIM = ***vi***
+---
+
 ![](imagens/002.png)
 
 - ***i*** = insert , para poder começar a editar um arquivo
@@ -16,7 +21,7 @@
 
 - ***:wq!*** = sai do editor e salvar as modificações feitas no arquivo.
 
->**Guia de comandos**
+**Guia de comandos**
 
 Guia de comandos do editor VI / VIM:
 
@@ -140,13 +145,18 @@ indicar o caractere)
 
 - s:/Linux/Unix/g – Substitui a ocorrência de “Linux” por “Unix” em todo arquivo
 
+`Mais Informações` 
+
 ![] (https://www.tutorlinux.com.br/2017/07/12/editor-vim-guia-completo/)
 
 ![] (https://e-tinet.com/linux/editor-texto-vim/)
 
 ># SUBLIME = ***osub***
+---
 ![](imagens/003.png)
 mais adequado para manipular codigos
+
+`Mais Informações`
 
 ![] (https://www.devmedia.com.br/sublime-text-ide-introducao-a-melhor-ide-para-desenvolvimento/34117)
 
@@ -161,8 +171,10 @@ mais adequado para manipular codigos
 ![] (https://aurelio.net/curso/material/vim-ref.html)
 
 ># ViSUAL STUDIO CODE = ***code***
-![](imagens/004.png)
-mais completo para desenvolver codigos 
+---
+![](imagens/004.png) 
+
+`Mais Informações` 
 
 ![] (https://www.devmedia.com.br/introducao-ao-visual-studio-code/34418)
 

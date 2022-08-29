@@ -83,6 +83,7 @@ quando modificamos um arquivo que ja foi adicionado podemos
 jogar ele para uma area onde vai ser criada a versão
 ```   
 ***AREA DE STAGED*** 
+
 **STAGED** ESTADO
 
 ```
