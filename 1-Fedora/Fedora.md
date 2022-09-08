@@ -4,6 +4,8 @@
 
 - **Alt + Space** e pesquisa 'terminator' = Abre um terminal
 
+- **Segurando a Tecla Ctrl + Scrool do Mouse** = Manipula  o Zoom Dentro do Terminal - Aumentando ou Diminuindo
+
 - **Ctrl + t** = Abre novas guias de terminal dentro de um terminal já em execução
 
 - **Ctrl + Super + 'Setas De Movimentação' < | >** = Alterna entre as guias que estão abertas no terminal (a tecla super é a tecla com a logo do Windows)

@@ -2,7 +2,7 @@
 
 ># 1- A importância de testar 
 
->>**Por que testar ?**
+**Por que testar ?**
 
 Testar é o processo de executar um programa ou sistema com a intenção de encontrar defeitos (test Negativo).
 
@@ -24,7 +24,7 @@ Quem desenvolve software acaba sendo o próprio responsável pela garantia da qu
 
 é nesse cenário que entra o  papel fundamental dos testes - Quality Assurance (Controle de Qualidade).
 
->>**Como testar?**
+**Como testar?**
 
 - Testes de Caixa-preta e Caixa-branca
 
@@ -59,7 +59,7 @@ ALTO NIVEL - vai focar na Interface de Usuário (USABILIDADE) caixa-preta.
 
 ![](imagens/005.png)
 
->>**Regra 10 de Myers**
+**Regra 10 de Myers**
 
 Esta regra trata a respeito do custo da correção de Defeitos no Processo de desenvolvimento de um Software
 
