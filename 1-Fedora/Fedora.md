@@ -18,23 +18,7 @@
 
 - **clear ou Crtl + L** = Limpa o termnal
 
-`DUAS FORMAS DE REPRESENTAR /home/me`
-
-    [Usuario administrador]
-    [local/usuario]
-
-    [home/me]    >>       são os mesmos caminhos 
-    [~]             representados de formas diferentes
-
-    --------------------------------------------------------------
-    --------------------------------------------------------------
-
-    [~] = significa pasta pessoal (~ é o mesmo que >>> /home/me) 
-
-    [/] = onde se encontra o diretório raiz do sistema linux , 
-    para guarda as informacões de programas instalados no sistema e 
-    também pastas de funcionamento do próprio sistema linux.
-
+- **Alterar o Titulo na guia do Terminal** = Click duplo na aba e voce consegue editar o titulo da guia 
 
 - **pwd** = Mostra qual o caminho/diretório que está atualmente 
 
@@ -48,11 +32,11 @@
 
 - **'nome do comando' --help** =  Traz ajuda sobre determinado comando 
 
-- **'nome do comando' --manual** = Traz o manual do comando com as opcões
+- **man "NomeDoarquivo"** = Traz um manual sobre o comando
 
-- **alias 'NomeQueDesejaUsar'='NomeAtualdoComando'** Com isso modificamos o comando = vai dar um nome ao comando, podemos através desse comando mudar o comando e personalizá-lo 
+- **alias 'NomeQueDesejaUsar'='NomeAtualdoComando'** Com isso modificamos o comando = vai dar um nome ao comando, podemos através desse comando mudar o comando e personalizá-lo com um novo nome
 
-`Observação !!`
+`Observação Sobre o onde colocar o Alias !!`
 
     Para modificar esse arquivo temos que ir em /home/me/.bashrc  ou  ~/.bashrc
     e abrir com um editor de codigo ou VScode ou Sublime
@@ -63,28 +47,51 @@
     colocamos o alias dentro desse arquivo e salvamos as modificações , 
     e pronto !!  o arquivo agora contem o comando modificado/personalizado
 
+`EXISTEM DUAS FORMAS DE REPRESENTAR O CAMINHO /home/me`
 
->## 2 Tópico - Conhecendo o terminal Linux e seus atalhos
+    [Usuario administrador]
+    [local/usuario]
+
+    cd home/me    >>       são os mesmos caminhos 
+    cd ~             representados de formas diferentes
+
+    Se voce digitar o comando "pwd" vai ver o resultado  >> home/me
+    [~] = significa pasta pessoal (~ é o mesmo que >>> /home/me) 
+
+    --------------------------------------------------------------
+    --------------------------------------------------------------
+
+    *SO A BARRA É A RAIZ DO SISTEMA*
+
+    cd / [/] = onde se encontra o diretório raiz do sistema linux , 
+    para guarda as informacões de programas instalados no sistema e 
+    também pastas de funcionamento do próprio sistema linux.
+
+>## 2 Tópico - Conhecendo o terminal Linux e seus atalhos Úteis
 
 `ATALHOS PARA UTILIZAR DENTRO DO TERMINAL`
  
 Quando entramos em algum editor de texto pelo terminal por exemplo e queremos sair, qual tecla de atalho utilizar ? 
 
-- **Ctrl + C** = Cancela o comando atual em funcionamento 
+- **cd "Iniciais do nome da pasta" e pressione TAB** = Autopreencher o nome da pasta que voce deseja ir buscando a pasta com as iniciais que voce colocar
 
-- **Ctrl + Z** = Pausa o comando atual, colocando ele em segundo plano, fechando o terminal
+- **Ctrl + A** = Move o cursor do mouse para o inicio da linha ou pode utilizar a tecla **"Home"** que vai fazer o mesmo 
 
-- **Ctrl + D** = Faz logout da sessao atual, sai do terminal
+- **Ctrl + E** = Move o cursor do mouse pra o final da linha ou pode utilizar a tecla **"End"** que vai fazer o mesmo 
 
-- **exit**= Sai do terminal assim como o Crtl+d
+- **Ctrl + U** = Consegue apagar tudo que foi digitado ao invez de usar o Backspace 
 
-`ESCREVENDO NO TERMINAL E MANIPULANDO O QUE FOI ESCRITO`
+- **Ctrl + K** = Este é semelhante ao atalho Ctrl + U. A única diferença é que, em vez do início da linha, ela apaga tudo, da posição atual do cursor até o final da linha. 
 
-- **Ctrl+W** = Apaga uma palavra na linha atual
+- **Ctrl + C** = Cancela a execução do comando atual em funcionamento 
 
-- **Ctrl+U** = Apaga a linha inteira
+- **Ctrl + Z** = Pausa a execução do comando atual, colocando ele em segundo plano, fechando o terminal
 
-- **Ctrl+R** = Busca um comando recente
+- **Ctrl + R** = Busca um comando recente
+
+- **Ctrl + D** = Faz logout da sessao atual, sai do terminal , é o mesmo que o "Ctrl + W ou exit" fecha o a guia atual 
+
+**São 3 formas de fazer o mesmo comando  --->> (Ctrl+W - Ctrl+D ou exit)**
 
 `NAVEGANDO ENTRE DIRETORIOS(PASTAS)/ARQUIVOS`
 
@@ -137,7 +144,7 @@ Outra forma de usar- pode ser usado junto com o nome da pasta que voce deseja li
 
 - **mv 'NomeDaPasta' 'caminho'**  = Vai mover um arquivo/diretorio(pasta)atual para o caminho que foi determinado e vai com o mesmo nome do original
 
-- **mv 'NomeDaPasta' 'caminho'/'novo nome'do arquivo ou pasta'** = Vai mover um arquivo/diretorio(pasta)atual para o caminho que foi determinado. e vai modificar vai o nome
+- **mv 'NomeDaPastaOuArquivo' 'caminho'/novo nome do arquivo ou pasta** = Vai mover um arquivo/diretorio(pasta)atual para o caminho que foi determinado. e vai modificar vai o nome
 
 
 `CRIANDO ARQUIVOS, COPIANDO, EDITANDO,VISUALIZANDO E REMOVENDO`
@@ -199,16 +206,15 @@ mais informacoes em [wc --help]
 
 `COMANDOS DE REDIRECIONAMENTO | Criando novos arquivos`
 
-- **head 'nome do arquivo' > NomeDoArquivoNovoque VaiserCriado**
+- **head 'nome do arquivo' > NomeDoArquivoNovoque VaiserCriado** = vai pegar as 10 primeiras linhas e colocar dentro desse arquivo novo, criando um novo arquivo com aquele contéudo que foi listado
 
-- **tail 'nome do arquivo' > NomeDoArquivoNovoque VaiserCriado** = vai pegar as 10 linhas e colocar dentro desse arquivo novo, criando um novo arquivo com aquele contéudo que foi listado
+- **tail 'nome do arquivo' > NomeDoArquivoNovoque VaiserCriado** = vai pegar as 10 ultimas linhas e colocar dentro desse arquivo novo, criando um novo arquivo com aquele contéudo que foi listado
 
 `REDIRECIONANDO INFORMAÇÕES DE COMANDOS`
 
-- **cal** =  Mostra o calendario 
+- **cal** =  Mostra o calendario do mes atual, e se coloca o ano "cal 2022" traz todo o calendario do ano 
 
 e se quisermos criar um arquivo com isso que foi impresso no terminal, como fazer ? Com REDIRECIONAMENTO 
-
 
 - **cal > 'NomeDoArquivo'** = É criado um arquivo com a informacão que o comando mostra no terminal
 ```
@@ -348,6 +354,10 @@ Para que essas redes se comuniquem , existem alguns tradutores que fazem a comun
     Para que saibamos o ip da nossa máquina. passamos o comando [ipconfig]
 
 - **ipconfig ou nmcli** = Vai mostrar a inteface de rede e listar as informacões da rede , e podemos ver o IP de nossa máquina
+
+- **nmcli radio wifi on** = Vai ligar o wifi com o "On" 
+
+- **nmcli radio wifi off** = e Desligar o wifi com o "Off"
 
 - **nmcli device wifi list** = Vai mostrar as redes wireless disponiveis
 
@@ -592,7 +602,7 @@ Diferente do outro comando **'lastlog'** Que traz informaçÕes de todos os usu�
 
     Exemplos de Gerenciadores [dpgk] [apt] [yum] [dnf]
 
-`COMANDOS DOS GERENCIADORES PARA INSTALAR OS PACOTES`
+`COMANDOS DOS GERENCIADORES PARA INSTALAR OS PACOTES UBUNTU`
 
 - **sudo apt install 'NomePacote'** = Faz a instalação do pacote
 
@@ -681,7 +691,7 @@ O CASO         >>   ~/test - LEVA A PASTA COM OS ARQUIVOS
 E O OUTRO CASO >>   ~/test/ - LEVA APENAS OS ARQUIVOS QUE ESTAVAM NA PASTA
 ```
 
->## 12 Tópico - Comandos Mais Úteis Para Otimizar o Trabalho | DETALHES DE CADA COMANDO
+>## 12 Tópico - Comandos Mais Utilizados Para Otimizar o Trabalho | DETALHES DE CADA COMANDO PARA CONSULTAR E LEMBRAR PARA QUE SERVE CADA COMANDO
 
 - `**1. Comando pwd**`
 
@@ -882,37 +892,6 @@ Como o Linux é um sistema multiusuário, isso significa que mais de uma pessoa 
 
 Remover um usuário é muito semelhante a adicionar um novo usuário. Para excluir o tipo de conta de usuário, userdel username.
 
->## 13 Tópico - Dicas e truques de Bônus
-
-Use o comando **clear**  ou **Ctrl + L**, para limpar o terminal se estiver cheio de muitos comandos usados anteriormente. 
-
-```
-Experimente o botão ***TAB*** para preencher 
-automaticamente o que você está digitando. 
-Por exemplo, se você precisa digitar Documentos, 
-comece a digitar o comando (vamos usar o cd Docu, 
-então aperte a tecla TAB) e o terminal preencherá 
-o restante, mostrando o cd Documents.
-```
-
-**Ctrl + C** e **Ctrl + Z** =  são usados para qualquer comando que esteja funcionando no momento. Ctrl + C interromperá o comando com segurança, e o Ctrl + Z forçara a parada.
-
-Se você congelar seu terminal acidentalmente com o **Ctrl + S**, simplesmente desfaça o congelamento com **Ctrl + Z**
-
-- **Ctrl + D** = faz logout da sessao atual, sai do terminal
-
-- **exit**= sai do terminal assim como o Crtl+d
-
-- **Ctrl+W** = apaga uma palavra na linha atual
-
-- **Ctrl+U** = apaga a linha inteira
-
-- **Ctrl + A**=  move você para o início da linha 
-
-- **Ctrl + E** =  move você para o fim
-
-- **Ctrl + R** = busca um comando recente
-
 >## Comandos Linux de ( A a Z ) Guia Linux
 
 - ![GuiaLinux] (https://guialinux.uniriotec.br/)
@@ -920,23 +899,17 @@ Se você congelar seu terminal acidentalmente com o **Ctrl + S**, simplesmente d
 >## Links Úteis | Mais Informações
 - ![] (https://docs.fedoraproject.org/en-US/docs/)
 
-- ![] (https://devcontent.com.br/artigos/linux/principais-comandos-terminal)
-
 - ![] (https://help.ubuntu.com/kubuntu/desktopguide/pt_BR/terminals.html)
 
 - ![] (https://pt.wikihow.com/Obter-Acesso-Root-no-Linux)
 
 - ![] (https://diolinux.com.br/tutoriais/como-usar-o-thunar-como-gerenciador-de-arquivos-padrao-no-ubuntu.html)
 
-- ![] (https://www.ti-enxame.com/pt/thunar/)
-
 - ![] (https://livreeaberto.com/baixar-arquivos-do-terminal-linux)
 
 - ![] (https://sempreupdate.com.br/como-baixar-arquivos-via-linha-de-comando-usando-wget/)
 
 - ![] (https://e-tinet.com/linux/wget/)
-
-- ![] (https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/Como-fazer-download-de-arquivos)
 
 - ![] (https://www.hostinger.com.br/tutoriais/wget-o-que-e-como-instalar-comandos-wget)
 
@@ -975,8 +948,6 @@ Se você congelar seu terminal acidentalmente com o **Ctrl + S**, simplesmente d
 - ![] (https://e-tinet.com/linux/chmod/)
 
 - ![] (https://www.linuxforce.com.br/comandos-linux/comandos-linux-comando-chmod/)
-
-- ![] (https://devcontent.com.br/artigos/linux/como-executar-scripts-no-terminal)
 
 - ![] (https://canaltech.com.br/linux/Introducao-ao-Shell-Script/)
 
