@@ -1,4 +1,4 @@
->## 1 Tópico - Introdução ao tema Conceitos iniciais
+># Introdução ao tema Conceitos iniciais
 
 `O Porque de Utilizar o Docker - um Pouco Sobre a História dessa Tecnologia` 
 *  A evolução do host de aplicações (host=hospedagem, serviço que armazena os arquivos no servidor)  
@@ -241,13 +241,267 @@ OPEREACIONAIS, COMO FUNCIONA NAS VM'S
 
 `O QUE é O DOCKER ?`
 
-* Docker inc.( Empresa ) antes se chamava DotCloud
+* De forma bem resumida, podemos dizer que o Docker é uma plataforma aberta, criada com o objetivo de facilitar o desenvolvimento, a implantação e a execução de aplicações em ambientes isolados. Foi desenhada especialmente para disponibilizar uma aplicação da forma mais rápida possível.
 
-![](imagens/013.png)
+![](imagens/013.jpg)
 
+Usando o Docker, você pode facilmente gerenciar a infraestrutura da aplicação, isso agilizará o processo de criação, manutenção e modificação do seu serviço.
 
->## Links Extras Para Mais Informações 
+Todo processo é realizado sem necessidade de qualquer acesso privilegiado à infraestrutura corporativa. Assim, a equipe responsável pela aplicação pode participar da especificação do ambiente junto com a equipe responsável pelos servidores.
+
+O Docker viabilizou uma "linguagem" comum entre desenvolvedores e administradores de servidores. Essa nova "linguagem" é utilizada para construir arquivos com as definições da infraestrutura necessária e como a aplicação será disposta nesse ambiente, em qual porta fornecerá seu serviço, quais dados de volumes externos serão requisitados e outras possíveis necessidades.
+
+O Docker também disponibiliza uma nuvem pública para compartilhamento de ambientes prontos, que podem ser utilizados para viabilizar customizações para ambientes específicos. É possível obter uma imagem pronta do apache e configurar os módulos específicos necessários para a aplicação e, assim, criar seu próprio ambiente customizado. Tudo com poucas linhas de descrição.
+
+    O Docker utiliza o modelo de container para “empacotar” a aplicação que, após ser transformada em imagem Docker, pode ser reproduzida em plataforma de qualquer porte; ou seja, caso a aplicação funcione sem falhas em seu notebook, funcionará também no servidor ou no mainframe. Construa uma vez, execute onde quiser.
+
+Os containers são isolados a nível de disco, memória, processamento e rede. Essa separação permite grande flexibilidade, onde ambientes distintos podem coexistir no mesmo host, sem causar qualquer problema. Vale salientar que o overhead nesse processo é o mínimo necessário, pois cada container normalmente carrega apenas um processo, que é aquele responsável pela entrega do serviço desejado. Em todo caso, esse container também carrega todos os arquivos necessários (configuração, biblioteca e afins) para execução completamente isolada.
+
+    Outro ponto interessante no Docker é a velocidade para viabilizar o ambiente desejado; como é basicamente o início de um processo e não um sistema operacional inteiro, o tempo de disponibilização é, normalmente, medido em segundos.
+
+`Virtualização a nível do sistema operacional`
+
+O modelo de isolamento utilizado no Docker é a virtualização a nível do sistema operacional, um método de virtualização onde o kernel do sistema operacional permite que múltiplos processos sejam executados isoladamente no mesmo host. Esses processos isolados em execução são denominados no Docker de container.
+
+![](imagens/014.png)
+
+Para criar o isolamento necessário do processo, o Docker usa a funcionalidade do kernel, denominada de namespaces, que cria ambientes isolados entre containers: os processos de uma aplicação em execução não terão acesso aos recursos de outra. A menos que seja expressamente liberado na configuração de cada ambiente.
+
+    Para evitar a exaustão dos recursos da máquina por apenas um ambiente isolado, o Docker usa a funcionalidade cgroups do kernel, responsável por criar limites de uso do hardware a disposição. Com isso é possível coexistir no mesmo host diferentes containers sem que um afete diretamente o outro por uso exagerado dos recursos compartilhados.
+
+># Comandos básicos e Sua Utilidade
+
+- `docker attach`  – Acessar dentro do container e trabalhar a partir dele.
+
+- `docker build `  – A partir de instruções de um arquivo Dockerfile eu possa criar uma imagem.
+
+- `docker commit`  – Cria uma imagem a partir de um container.
+
+- `docker cp`     – Copia arquivos ou diretórios do container para o host.
+
+- `docker create`  – Cria um novo container.
+
+- `docker diff`    – Exibe as alterações feitas no filesystem do container.
+
+- `docker events`  – Exibe os eventos do container em tempo real.
+
+- `docker exec`    – Executa uma instrução dentro do container que está rodando sem precisar atachar nele.
+
+- `docker export`  – Exporta um container para um arquivo .tar.
+
+- `docker history `– Exibe o histórico de comandos que foram executados dentro do container.
+
+- `docker images ` – Lista as imagens disponíveis no host.
+
+- `docker import ` – Importa uma imagem .tar para o host.
+
+- `docker info`    – Exibe as informações sobre o host.
+
+- `docker inspect` – Exibe r o json com todas as configurações do container.
+
+- `docker kill`    – Da Poweroff no container.
+
+- `docker load `   – Carrega a imagem de um arquivo .tar.
+
+- `docker login `  – Registra ou faz o login em um servidor de registry.
+
+- `docker logout ` – Faz o logout de um servidor de registry.
+
+- `docker logs `   – Exibe os logs de um container.
+
+- `docker port`    – Abre uma porta do host e do container.
+
+- `docker network `– Gerenciamento das redes do Docker.
+
+- `docker node`    – Gerenciamento dos nodes do Docker Swarm.
+
+- `docker pause`   – Pausa o container.
+
+- `docker port `   – Lista as portas mapeadas de um container.
+
+- `docker ps `     – Lista todos os containers.
+
+- `docker pull`    – Faz o pull de uma imagem a partir de um servidor de registry.
+
+- `docker push `   – Faz o push de uma imagem a partir de um servidor de registry.
+
+- `docker rename`  – Renomeia um container existente.
+
+- `docker restart `– Restarta um container que está rodando ou parado.
+
+- `docker rm `     – Remove um ou mais containeres.
+
+- `docker rmi `    – Remove uma ou mais imagens.
+
+- `docker run`     – Executa um comando em um novo container.
+
+- `docker save `   – Salva a imagem em um arquivo .tar.
+
+- `docker search ` – Procura por uma imagem no Docker Hub.
+
+- `docker service `– Gernciamento dos serviços do Docker.
+
+- `docker start`   – Inicia um container que esteja parado.
+
+- `docker stats `  – Exibe informações de uso de CPU, memória e rede.
+
+- `docker stop `   – Para um container que esteja rodando.
+
+- `docker swarm `  – Clusterização das aplicações em uma orquestração de várias containers, aplicações junto.
+
+- `docker tag `    – Coloca tag em uma imagem para o repositorio.
+
+- `docker top `    – Exibe os processos rodando em um container.
+
+- `docker unpause `– Inicia um container que está em pause.
+
+- `docker update`  – Atualiza a configuração de um ou mais containers.
+
+- `docker version `– Exibe as versões de API, Client e Server do host.
+
+- `docker volume`  – Gerenciamento dos volumes no Docker.
+
+- `docker wait`    – Aguarda o retorno da execução de um container para iniciar esse container.
+
+- `docker --help`  - Ver todos os comandos que o Docker possui
+
+># Parametros mais utilizados na Execução dos containers
+
+Para utilização do Docker é necessário conhecer alguns comandos e entender de forma clara e direta para que servem, assim como alguns exemplos de uso.
+
+**Executando um container**
+
+Para iniciar um container é necessário saber a partir de qual imagem será executado. Para listar as imagens que seu Docker host tem localmente, execute o comando abaixo:
+
+    docker image list
+
+As imagens retornadas estão presentes no seu Docker host e não demandam qualquer download da nuvem pública do Docker, a menos que deseje atualizá-la. Para atualizar a imagem basta executar o comando abaixo:
+
+    docker image pull python
+
+Usamos a imagem chamada python como exemplo, mas caso deseje atualizar qualquer outra imagem, basta colocar seu nome no lugar de python.
+
+Caso deseje inspecionar a imagem que acabou de atualizar, basta usar o comando abaixo:
+
+    docker image inspect python
+
+O comando inspect é responsável por informar todos os dados referentes à imagem.
+
+Agora que temos a imagem atualizada e inspecionada, podemos iniciar o container. Mas antes de simplesmente copiar e colar o comando, vamos entender como ele realmente funciona.
+
+    docker container run <parâmetros> <imagem> <CMD> <argumentos>
+
+**Os parâmetros mais utilizados na execução do container são:**
+
+`Parâmetro`	--->> Explicação
+
+`-d`	--->> Execução do container em background
+
+`-i`	--->> Modo interativo. Mantém o STDIN aberto mesmo sem console anexado
+
+`-t`	--->> Aloca uma pseudo TTY
+
+`--rm`	--->> Automaticamente remove o container após finalização (Não funciona com -d)
+
+`--name`	--->> Nomear o container
+
+`-v`	--->> Mapeamento de volume
+
+`-p`	--->> Mapeamento de porta
+
+`-m`	--->> Limitar o uso de memória RAM
+
+`-c`	--->> Balancear o uso de CPU
+
+Segue um exemplo simples no seguinte comando:
+
+    docker container run -it --rm --name meu_python python bash
+
+De acordo com o comando acima, será iniciado um container com o nome meu_python, criado a partir da imagem python e o processo executado nesse container será o bash.
+
+Vale lembrar que, caso o CMD não seja especificado no comando docker container run, é utilizado o valor padrão definido no Dockerfile da imagem utilizada. No nosso caso é python e seu comando padrão executa o binário python, ou seja, se não fosse especificado o bash, no final do comando de exemplo acima, ao invés de um shell bash do GNU/Linux, seria exibido um shell do python.
+
+**Mapeamento de volumes**
+
+Para realizar mapeamento de volume basta especificar qual origem do dado no host e onde deve ser montado dentro do container.
+
+    docker container run -it --rm -v "<host>:<container>" python
+
+O uso de armazenamento é melhor explicado em capítulos futuros, por isso não detalharemos o uso desse parâmetro.
+
+**Mapeamento de portas**
+
+Para realizar o mapeamento de portas basta saber qual porta será mapeada no host e qual deve receber essa conexão dentro do container.
+
+    docker container run -it --rm -p "<host>:<container>" python
+
+Um exemplo com a porta 80 do host para uma porta 8080 dentro do container tem o seguinte comando:
+
+    docker container run -it --rm -p 80:8080 python
+
+Com o comando acima temos a porta 80 acessível no Docker host que repassa todas as conexões para a porta 8080 dentro do container. Ou seja, não é possível acessar a porta 8080 no endereço IP do Docker host, pois essa porta está acessível apenas dentro do container que é isolada a nível de rede, como já dito anteriormente.
+
+**Gerenciamento dos recursos**
+
+Na inicialização dos containers é possível especificar alguns limites de utilização dos recursos. Trataremos aqui apenas de memória RAM e CPU, os mais utilizados.
+
+Para limitar o uso de memória RAM que pode ser utilizada por esse container, basta executar o comando abaixo:
+
+    docker container run -it --rm -m 512M python
+
+Com o comando acima estamos limitando esse container a utilizar somente 512 MB de RAM.
+
+Para balancear o uso da CPU pelos containers, utilizamos especificação de pesos para cada container, quanto menor o peso, menor sua prioridade no uso. Os pesos podem oscilar de 1 a 1024.
+
+Caso não seja especificado o peso do container, ele usará o maior peso possível, nesse caso 1024.
+
+Usaremos como exemplo o peso 512:
+
+    docker container run -it --rm -c 512 python
+
+Para entendimento, vamos imaginar que três containers foram colocados em execução. Um deles tem o peso padrão 1024 e dois têm o peso 512. Caso os três processos demandem toda CPU o tempo de uso deles será dividido da seguinte maneira:
+
+O processo com peso 1024 usará 50% do tempo de processamento
+Os dois processos com peso 512 usarão 25% do tempo de processamento, cada.
+
+**Verificando a lista de containers**
+
+Para visualizar a lista de containers de um determinado Docker host utilizamos o comando docker ps.
+
+Esse comando é responsável por mostrar todos os containers, mesmo aqueles não mais em execução.
+
+    docker container list <parâmetros>
+
+Os parâmetros mais utilizados na execução do container são:
+
+`Parâmetro`	--->> Explicação
+`-a`	--->>Lista todos os containers, inclusive os desligados
+`-l`	--->>Lista os últimos containers, inclusive os desligados
+`-n`	--->>Lista os últimos N containers, inclusive os desligados
+`-q`	--->>Lista apenas os ids dos containers, ótimo para utilização em scripts
+
+**Gerenciamento de containers**
+
+Uma vez iniciado o container a partir de uma imagem é possível gerenciar a utilização com novos comandos.
+
+Caso deseje desligar o container basta utilizar o comando docker stop. Ele recebe como argumento o ID ou nome do container. Ambos os dados podem ser obtidos com o docker ps, explicado no tópico anterior.
+
+Um exemplo de uso:
+
+    docker container stop meu_python
+
+No comando acima, caso houvesse um container chamado meu_python em execução, ele receberia um sinal SIGTERM e, caso não fosse desligado, receberia um SIGKILL depois de 10 segundos.
+
+Caso deseje reiniciar o container que foi desligado e não iniciar um novo, basta executar o comando docker start:
+
+    docker container start meu_python
+
+    A ideia dos containers é a de serem descartáveis. Caso você use o mesmo container por muito tempo sem descartá-lo, provavelmente está usando o Docker incorretamente. O Docker não é uma máquina, é um processo em execução. E, como todo processo, deve ser descartado para que outro possa tomar seu lugar na reinicialização do mesmo.
+
+># Links Extras Para Mais Informações 
 ---
+
+![] (https://stack.desenvolvedor.expert/appendix/docker/introducao.html)
 
 ![] (https://docker-curriculum.com/)
 
