@@ -1,4 +1,4 @@
-**ESTRUTURA DO HTML - NOÇÕES BASICAS**
+># ESTRUTURA DO HTML - NOÇÕES BASICAS
 
 *Anatomia HTML*
 
@@ -6,9 +6,10 @@ HTML é composto de elementos . Esses elementos estruturam a página da Web e de
 
 O diagrama do elemento parágrafo é composto por:
 
-Uma tag de abertura ( <p>)
-O conteúdo (texto “Hello World!”)
-Uma tag de fechamento ( </p>)
+    Uma tag de abertura ( <p>)
+    O conteúdo (texto “Hello World!”)
+    Uma tag de fechamento ( </p>)
+
 Uma tag e o conteúdo entre ela é chamado de elemento HTML. Existem muitas tags que podemos usar para organizar e exibir texto e outros tipos de conteúdo, como imagens.
 
 Vamos revisar rapidamente cada parte do elemento retratado:
@@ -28,36 +29,47 @@ Vamos revisar rapidamente cada parte do elemento retratado:
 Um dos principais elementos HTML que usamos para construir uma página da web é o elemento body . Somente o conteúdo dentro das tags de corpo de abertura e fechamento pode ser exibido na tela. 
 Veja como são as tags de corpo de abertura e fechamento:
 
+```html
 <body>
     <p>...</p>  ---- aqui vai todo o conteudo do paragrafo
 </body>
+```
 
 *Estrutura HTML*
 
 HTML é organizado como uma coleção de relacionamentos de árvores genealógicas. Como você viu no último exercício, colocamos <p>tags dentro de <body>tags. Quando um elemento está contido em outro elemento, ele é considerado filho desse elemento. Diz-se que o elemento filho está aninhado dentro do elemento pai .
 
+```html
 <body>
 <p>This paragraph is a child of the body</p>
 </body>
-
+```
+```html
 No exemplo acima, o <p>elemento está aninhado dentro do <body>elemento. O <p>elemento é considerado filho do <body>elemento e o <body>elemento é considerado pai. Você também pode ver que adicionamos dois espaços de recuo (usando a spacebarra) para melhor legibilidade.
+```
 
 Como pode haver vários níveis de aninhamento, essa analogia pode ser estendida a netos, bisnetos e além. A relação entre os elementos e seus elementos ancestrais e descendentes é conhecida como hierarquia .
 
 Vamos considerar um exemplo mais complicado que usa algumas novas tags:
 
+```html
 <body>
   <div>
     <h1>Sibling to p, but also grandchild of body</h1>
     <p>Sibling to h1, but also grandchild of body</p>
   </div>
 </body>
+```
 
+```
 Neste exemplo, o <body>elemento é o pai do <div>elemento. Ambos os elementos <h1>e <p>são filhos do <div>elemento. Como os elementos <h1>e <p>estão no mesmo nível, eles são considerados irmãos e são ambos netos do <body>elemento.
+```
 
 Compreender a hierarquia HTML é importante porque os elementos filho podem herdar o comportamento e o estilo de seu elemento pai. Você aprenderá mais sobre hierarquia de páginas da Web quando começar a explorar CSS.
 
 `Exemplo`
+
+```html
 <body>
   <h1>Hello World</h1>
   <p>This paragraph is a child of the body element</p>
@@ -65,6 +77,7 @@ Compreender a hierarquia HTML é importante porque os elementos filho podem herd
     <p>This paragraph is a child of the div element and a grandchild of the body element</p>
   </div> 
 </body>
+```
 
 *Títulos*
 
@@ -74,17 +87,21 @@ O HTML segue um padrão semelhante. Em HTML, existem seis títulos diferentes , 
 
 A seguir está a lista de elementos de cabeçalho disponíveis em HTML. Eles são ordenados do maior para o menor em tamanho.
 
+```html
 <h1>— usado para títulos principais. Todos os outros títulos menores são usados para subtítulos.
 <h2>
 <h3>
 <h4>
 <h5>
 <h6>
+```
 O código de exemplo a seguir usa um título destinado a capturar a atenção do leitor. Ele usa o maior título disponível, o elemento de título principal:
-
+```html
 <h1>BREAKING NEWS</h1>
+```
 
 `Exemplo`
+```html
 <body>
 <h1>BREAKING NEWS</h1>
   <h2>About Brown Bears</h2>
@@ -95,11 +112,13 @@ O código de exemplo a seguir usa um título destinado a capturar a atenção do
   <h3>Countries with Small Brown Bear Populations</h3>
 <h2>Media</h2>  
 </body>
+```
 
 *Divs*
-
+```html
 Um dos elementos mais populares em HTML é o <div>elemento. <div>é a abreviação de "divisão" ou um contêiner que divide a página em seções. Essas seções são muito úteis para agrupar elementos em seu HTML.
-
+```
+```html
 <body>
   <div>
     <h1>Why use divs?</h1>
@@ -107,12 +126,15 @@ Um dos elementos mais populares em HTML é o <div>elemento. <div>é a abreviaç�
   </div>
 </body>
 <div>
-
+```
+```html
 As divs não têm uma representação visual inerente, mas são muito úteis quando queremos aplicar estilos personalizados aos nossos elementos HTML. <div>s nos permitem agrupar elementos HTML para aplicar os mesmos estilos para todos os elementos HTML internos. Também podemos estilizar o <div>elemento como um todo. Você pode ver como isso pode ser feito no curso Aprenda CSS .
 
 <div>s podem conter qualquer texto ou outros elementos HTML, como links, imagens ou vídeos. Lembre-se de sempre adicionar dois espaços de recuo ao aninhar elementos dentro de <div>s para melhor legibilidade.
+```
 
 `Exemplo`
+```html
 <body>
   <h1>The Brown Bear</h1>
   <div>
@@ -129,6 +151,7 @@ As divs não têm uma representação visual inerente, mas são muito úteis qua
     <h2>Media</h2>
   </div>
 </body>
+```
 
 *Atributos*
 
@@ -136,11 +159,13 @@ Se quisermos expandir a tag de um elemento, podemos fazê-lo usando um atributo.
 
   O nome do atributo
   O valor do atributo
-
+```html
 Um atributo comumente usado é o id. Podemos usar o id atributo para especificar conteúdo diferente (como <div>s) e é muito útil quando você usa um elemento mais de uma vez. ids têm vários propósitos diferentes em HTML, mas, por enquanto, vamos nos concentrar em como eles podem nos ajudar a identificar o conteúdo em nossa página.
 
 Quando adicionamos um ida a <div>, colocamos na tag de abertura:
+```
 
+```html
 <div id="intro">
   <h1>Introduction</h1>
 </div>
@@ -163,15 +188,17 @@ Quando adicionamos um ida a <div>, colocamos na tag de abertura:
   </div>
 </body>
 
+```
 *Exibindo texto*
 
 Se você deseja exibir texto em HTML, você pode usar um parágrafo ou uma extensão :
-
+```html
 Os parágrafos ( <p>) contêm um bloco de texto simples.
 <span>contém pequenos pedaços de texto ou outro HTML. Eles são usados ​​para separar pequenos pedaços de conteúdo que estão na mesma linha de outros conteúdos.
-
+```
 Dê uma olhada em cada um desses elementos em ação abaixo:
 
+```html
 <div>
   <h1>Technology</h1>
 </div>
@@ -179,11 +206,13 @@ Dê uma olhada em cada um desses elementos em ação abaixo:
   <p><span>Self-driving cars</span> are anticipated to replace up to 2 million jobs over the next two decades.</p>
 </div>
 
+```
 No exemplo acima, existem dois arquivos <div>. O segundo <div>contém um <p>com <span>Self-driving cars</span>. Esse <span>elemento separa “Carros autônomos” do restante do texto do parágrafo.
 
 É melhor usar um <span>elemento quando você deseja segmentar um conteúdo específico que está embutido ou na mesma linha de outro texto. Se você quiser dividir seu conteúdo em blocos , é melhor usar um arquivo <div>.
 
 `Exemplo`
+```html
 <body>
   <h1>The Brown Bear</h1>
   <div id="introduction">
@@ -203,27 +232,31 @@ No exemplo acima, existem dois arquivos <div>. O segundo <div>contém um <p>com 
     <h2>Media</h2>
   </div>
 </body>
+```
 
 *Texto de estilo*
-
+```
 Você também pode estilizar o texto usando tags HTML. A <em>tag enfatiza o texto, enquanto a <strong>tag destaca o texto importante.
-
+```
+```
 Mais tarde, quando você começar a estilizar sites, você decidirá como deseja que os navegadores exibam o conteúdo <em>e as <strong>tags. Os navegadores, no entanto, têm folhas de estilo internas que geralmente estilizam essas tags das seguintes maneiras:
-
+```
+```
 A <em>tag geralmente será renderizada como ênfase em itálico .
 O <strong>geralmente será renderizado como ênfase em negrito .
-
+```
 Dê uma olhada em cada estilo em ação:
 
-<p><strong>The Nile River</strong> is the <em>longest</em> river in the world, measuring over 6,850 kilometers long (approximately 4,260 miles).</p>
-
+    <p><strong>The Nile River</strong> is the <em>longest</em> river in the world, measuring over 6,850 kilometers long (approximately 4,260 miles).</p>
+```
 Neste exemplo, as tags <strong>e <em>são usadas para enfatizar o texto para produzir o seguinte:
 
 The Nile River is the longest river in the world, measuring over 6,850 kilometers long (approximately 4,260 miles).
-
+```
 Como podemos ver, “The Nile River” está em negrito e “longest” está em itálico.
 
 `Exemplo`
+```html
 <body>
   <h1>The Brown Bear</h1>
   <div id="introduction">
@@ -243,6 +276,7 @@ Como podemos ver, “The Nile River” está em negrito e “longest” está em
     <h2>Media</h2>
   </div>
 </body>
+```
 
 *Quebras de linha*
 
@@ -250,38 +284,42 @@ O espaçamento entre o código em um arquivo HTML não afeta o posicionamento do
 
 O elemento de quebra de linha é único porque é composto apenas por uma tag inicial. Você pode usá-lo em qualquer lugar dentro do seu código HTML e uma quebra de linha será mostrada no navegador.
 
-<p>The Nile River is the longest river <br> in the world, measuring over 6,850 <br> kilometers long (approximately 4,260 <br> miles).</p>
+    <p>The Nile River is the longest river <br> in the world, measuring over 6,850 <br> kilometers long (approximately 4,260 <br> miles).</p>
 
 O código no exemplo acima resultará em uma saída semelhante à seguinte:
-
-The Nile River is the longest river              --<br>
-in the world, measuring over 6,850               --<br> Essas tags <br> fazem a quebra de linha como no texto do exemplo
-kilometers long (approximately 4,260             --<br>
-miles).
-
+```html
+    The Nile River is the longest river              --<br>
+    in the world, measuring over 6,850               --<br> Essas tags <br> fazem a quebra de linha como no texto do exemplo
+    kilometers long (approximately 4,260             --<br>
+    miles).
+```
 *Listas não ordenadas*
 
 Além de organizar o texto em forma de parágrafo, você também pode exibir o conteúdo em uma lista de fácil leitura.
 
 Em HTML, você pode usar uma tag de lista não ordenada<ul> ( ) para criar uma lista de itens em nenhuma ordem específica. Uma lista não ordenada descreve itens de lista individuais com um marcador.
 
-O <ul>elemento não deve conter texto bruto e não formatará automaticamente o texto bruto em uma lista não ordenada de itens. Itens de lista individuais devem ser adicionados à lista não ordenada usando a <li>tag. A <li>tag de item ou lista é usada para descrever um item em uma lista.
-
+    O <ul>elemento não deve conter texto bruto e não formatará automaticamente o texto bruto em uma lista não ordenada de itens. Itens de lista individuais devem ser adicionados à lista não ordenada usando a <li>tag. A <li>tag de item ou lista é usada para descrever um item em uma lista.
+```html
 <ul>
   <li>Limes</li>
   <li>Tortillas</li>
   <li>Chicken</li>
 </ul>
-
+```
+```html
 No exemplo acima, a lista foi criada usando a <ul>tag e todos os itens da lista individual foram adicionados usando <li>tags.
-
+```
 A saída ficará assim:
 
+```html
   Limes
   Tortillas
   Chicken
+```
 
 `Exemplo`
+```html
 <body>
   <h1>The Brown Bear</h1>
   <div id="introduction">
@@ -307,28 +345,32 @@ A saída ficará assim:
     <h2>Media</h2>
   </div>
 </body>
+```
 
 *Listas ordenadas*
-
+```html
 Listas ordenadas ( <ol>) são como listas não ordenadas, exceto que cada item da lista é numerado. Eles são úteis quando você precisa listar diferentes etapas em um processo ou classificar itens do primeiro ao último.
 
 Você pode criar a lista ordenada com a <ol>tag e adicionar itens de lista individuais à lista usando <li>tags.
-
+```
+```html
 <ol>
   <li>Preheat the oven to 350 degrees.</li>
   <li>Mix whole wheat flour, baking soda, and salt.</li>
   <li>Cream the butter, sugar in separate bowl.</li>
   <li>Add eggs and vanilla extract to bowl.</li>
 </ol>
+```
 
 A saída ficará assim:
-
+```
 1. Preheat the oven to 350 degrees.
 2. Mix whole wheat flour, baking soda, and salt.
 3. Cream the butter, sugar in separate bowl.
 4. Add eggs and vanilla extract to bowl.
-
+```
 `Exemplo`
+```html
 <body>
   <h1>The Brown Bear</h1>
   <div id="introduction">
@@ -359,17 +401,21 @@ A saída ficará assim:
     <h2>Media</h2>
   </div>
 </body>
+```
 
 *Imagens*
 
 Todos os elementos que você aprendeu até agora (títulos, parágrafos, listas e extensões) compartilham uma coisa em comum: eles são compostos inteiramente de texto! E se você quiser adicionar conteúdo à sua página da web que não seja composto de texto, como imagens ?
-
+```html
 A <img>tag permite que você adicione uma imagem a uma página da web. A maioria dos elementos requer tags de abertura e fechamento, mas a <img>tag é uma tag de fechamento automático . Observe que o final da <img>tag tem uma barra /. As tags de fechamento automático podem incluir ou omitir a barra final — ambas serão renderizadas corretamente.
-
+```
+```html
 <img src="image-location.jpg" />
 A <img>tag tem um atributo obrigatório chamado src. O srcatributo deve ser definido para a origem da imagem ou o local da imagem. Nesse caso, o valor de srcdeve ser o localizador uniforme de recursos (URL) da imagem. Um URL é o endereço da web ou endereço local onde um arquivo está armazenado.
+```
 
 `Exemplo`
+```html
 <body>
   <h1>The Brown Bear</h1>
   <div id="introduction">
@@ -401,25 +447,32 @@ A <img>tag tem um atributo obrigatório chamado src. O srcatributo deve ser defi
       <img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg" />
   </div>
 </body>
+```
 
 *Alts da imagem*
-
+```
 Parte de ser um desenvolvedor web excepcional é tornar seu site acessível a usuários de todas as origens. Para tornar a Web mais inclusiva, precisamos considerar o que acontece quando tecnologias assistivas, como leitores de tela, encontram tags de imagem.
 
 O alt atributo, que significa texto alternativo, traz significado às imagens em nossos sites. O alt atributo pode ser adicionado à tag de imagem assim como o src atributo. O valor de alt deve ser uma descrição da imagem.
+```
 
+```html
 <img src="#" alt="A field of yellow sunflowers" />
+```
+
 O alt atributo também serve para os seguintes propósitos:
 
-  Se uma imagem não carregar em uma página da Web, o usuário pode passar o mouse sobre a área originalmente destinada à imagem e ler uma breve descrição da imagem. Isso é possível pela descrição que você fornece no alt atributo.
+```
+Se uma imagem não carregar em uma página da Web, o usuário pode passar o mouse sobre a área originalmente destinada à imagem e ler uma breve descrição da imagem. Isso é possível pela descrição que você fornece no alt atributo.
 
-  Usuários com deficiência visual costumam navegar na web com o auxílio de softwares de leitura de tela. Quando você inclui o alt atributo, o software de leitura de tela pode ler a descrição da imagem em voz alta para o usuário com deficiência visual.
+Usuários com deficiência visual costumam navegar na web com o auxílio de softwares de leitura de tela. Quando você inclui o alt atributo, o software de leitura de tela pode ler a descrição da imagem em voz alta para o usuário com deficiência visual.
 
-  O alt atributo também desempenha um papel na otimização de mecanismos de pesquisa (SEO), porque os mecanismos de pesquisa não podem “ver” as imagens nos sites enquanto rastreiam a Internet. Ter alt atributos descritivos pode melhorar a classificação do seu site.
+O alt atributo também desempenha um papel na otimização de mecanismos de pesquisa (SEO), porque os mecanismos de pesquisa não podem “ver” as imagens nos sites enquanto rastreiam a Internet. Ter alt atributos descritivos pode melhorar a classificação do seu site.
 
-  Se a imagem na página da web não transmitir qualquer informação significativa para um usuário (deficiente visual ou não), o alt atributo deve ser deixado em branco.
-  
-  `Exemplo`
+Se a imagem na página da web não transmitir qualquer informação significativa para um usuário (deficiente visual ou não), o alt atributo deve ser deixado em branco.
+```
+`Exemplo`
+```html
   <body>
   <h1>The Brown Bear</h1>
   <div id="introduction">
@@ -451,14 +504,19 @@ O alt atributo também serve para os seguintes propósitos:
     <img src="https://content.codecademy.com/courses/web-101/web101-image_brownbear.jpg" alt="brown bear in the forest"/>
   </div>
 </body>
+```
 
 *Videos*
 
+```html
 Além das imagens, o HTML também suporta a exibição de vídeos . Assim como a <img>tag, a <video>tag requer um srcatributo com um link para a fonte de vídeo. Ao contrário da <img>tag, no entanto, o <video>elemento requer uma tag de abertura e uma tag de fechamento.
+```
 
+```html
 <video src="myVideo.mp4" width="320" height="240" controls>
   Video not supported
 </video>
+```
 
 Neste exemplo, a origem do vídeo ( src) é myVideo.mp4 A origem pode ser um arquivo de vídeo hospedado ao lado de sua página da Web ou um URL que aponta para um arquivo de vídeo hospedado em outra página da Web.
 
@@ -467,6 +525,7 @@ Após o src atributo, os atributos width e height são usados para definir o tam
 O texto “Vídeo não suportado”, entre as tags de abertura e fechamento do vídeo, só será exibido se o navegador não conseguir carregar o vídeo.
 
 `Exemplo`
+```html
 <body>
   <h1>The Brown Bear</h1>
   <div id="introduction">
@@ -499,8 +558,9 @@ O texto “Vídeo não suportado”, entre as tags de abertura e fechamento do v
     <video src="https://content.codecademy.com/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" width="320" height="240" controls> Video not supported</video>
   </div>
 </body>
-  
-**PADRÕES DE DOCUMENTOS HTML**
+```
+
+># PADRÕES DE DOCUMENTOS HTML
 
 *Preparando-se para HTML*
 
@@ -509,16 +569,17 @@ Agora que aprendemos sobre alguns dos elementos HTML mais comuns, é hora de apr
 Os arquivos HTML requerem certos elementos para configurar o documento corretamente. Podemos informar aos navegadores que estamos usando HTML iniciando nosso documento com uma declaração de tipo de documento .
 
 A declaração fica assim:
-
+```html
 <!DOCTYPE html>
 Esta declaração é uma instrução e deve ser a primeira linha de código em seu documento HTML. Ele informa ao navegador que tipo de documento esperar, junto com qual versão do HTML está sendo usada no documento. Por enquanto, o navegador assumirá corretamente que o htmlin <!DOCTYPE html>está se referindo ao HTML5, pois é o padrão atual.
-
+```
+```html
 No futuro, no entanto, um novo padrão substituirá o HTML5. Para garantir que seu documento seja sempre interpretado corretamente, sempre inclua <!DOCTYPE html>no início de seus documentos HTML.
-
+```
 Por fim, o código HTML é sempre salvo em um arquivo com extensão .html
 
 *A tag html*
-
+```html
 A <!DOCTYPE html>declaração fornece ao navegador duas informações (o tipo de documento e a versão HTML esperada), mas na verdade não adiciona nenhuma estrutura ou conteúdo HTML.
 
 Para criar estrutura e conteúdo HTML, devemos adicionar <html>tags de abertura e fechamento após declarar <!DOCTYPE html>:
@@ -528,12 +589,12 @@ Para criar estrutura e conteúdo HTML, devemos adicionar <html>tags de abertura 
  
 </html>
 Qualquer coisa entre as tags de abertura <html>e fechamento </html>será interpretada como código HTML. Sem essas tags, é possível que os navegadores interpretem incorretamente seu código HTML.
-
+```
 
 *A cabeça*
 
 Até agora você fez duas coisas para configurar o arquivo corretamente:
-
+```html
 Declarou ao navegador que seu código é HTML com <!DOCTYPE html>
 Adicionado o elemento HTML ( <html>) que conterá o restante do seu código.
 Adicionamos esses elementos à página Brown Bears que você criou anteriormente. Agora, vamos também fornecer ao navegador algumas informações sobre a própria página. Podemos fazer isso adicionando um <head>elemento.
@@ -541,9 +602,9 @@ Adicionamos esses elementos à página Brown Bears que você criou anteriormente
 Lembra da <body>etiqueta? O <head>elemento faz parte dessa metáfora HTML. Ele vai acima do nosso <body>elemento.
 
 O <head>elemento contém os metadados de uma página da web. Metadados são informações sobre a página que não são exibidas diretamente na página da web. Ao contrário das informações dentro da <body>tag, os metadados no cabeçalho são informações sobre a própria página. Você verá um exemplo disso no próximo exercício.
-
+```
 As tags head de abertura e fechamento geralmente aparecem como o primeiro item após sua primeira tag HTML:
-
+```html
 <head>
 </head>
 
@@ -586,13 +647,14 @@ As tags head de abertura e fechamento geralmente aparecem como o primeiro item a
     </div>
   </body>
 </html>
+```
 
 *Títulos de página*
-
+```html
 Que tipo de metadados sobre a página da web o <head>elemento pode conter?
-
+```
 Se você navegar até o catálogo da Codecademy e olhar na parte superior do seu navegador, você notará as palavras All Courses & Tutorials | Codecademy, que é o título da página da web.
-
+```html
 A guia de um navegador exibe o título especificado na <title>tag. A <title>tag está sempre dentro do <head>.
 
 <!DOCTYPE html>
@@ -602,8 +664,10 @@ A guia de um navegador exibe o título especificado na <title>tag. A <title>tag 
   </head>
 </html>
 Se abrissemos um arquivo contendo o código HTML do exemplo acima, o navegador exibiria as palavras My Coding Journalna barra de título (ou no título da guia).
+```
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -643,24 +707,26 @@ Se abrissemos um arquivo contendo o código HTML do exemplo acima, o navegador e
     </div>
   </body>
 </html>
+```
 
 *Link para outras páginas da web*
 
 Um dos aspectos poderosos do HTML (e da Internet) é a capacidade de vincular a outras páginas da web.
-
+```html
 Você pode adicionar links a uma página da Web adicionando um elemento âncora<a> e incluindo o texto do link entre as tags de abertura e fechamento.
 
 <a>This Is A Link To Wikipedia</a>
 Espere um minuto! Tecnicamente, o link no exemplo acima está incompleto. Como exatamente o link acima deve funcionar se não houver um URL que leve os usuários à página real da Wikipedia?
-
+```
 O elemento âncora no exemplo acima está incompleto sem o href atributo. Esse atributo significa referência de hiperlink e é usado para vincular a um caminho ou ao endereço de onde um arquivo está localizado (seja no seu computador ou em outro local). Os caminhos fornecidos para o href atributo geralmente são URLs.
-
+```html
 <a href="https://www.wikipedia.org/">This Is A Link To Wikipedia</a>
 No exemplo acima, o href atributo foi definido com o valor da URL https://www.wikipedia.org/. O exemplo agora mostra o uso correto de um elemento âncora.
-
+```
 Ao ler a documentação técnica, você pode se deparar com o termo hyperlink . Não se preocupe, este é simplesmente o termo técnico para link. Esses termos são frequentemente usados de forma intercambiável.
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -701,23 +767,25 @@ Ao ler a documentação técnica, você pode se deparar com o termo hyperlink . 
     </div>
   </body>
 </html>
+```
 
 *Abrindo links em uma nova janela*
-
+```html
 Você já clicou em um link e observou a página da Web resultante aberta em uma nova janela do navegador? Se sim, você pode agradecer ao atributo <a> do elemento .target
-
+```
 O target atributo especifica como um link deve ser aberto.
 
 É possível que um ou mais links em sua página da Web levem a um site totalmente diferente. Nesse caso, você pode querer que os usuários leiam o site vinculado, mas espere que eles retornem à sua página da web. Isso é exatamente quando o target atributo é útil!
 
 Para que um link seja aberto em uma nova janela, o target atributo requer um valor de _blank. O target atributo pode ser adicionado diretamente na tag de abertura do elemento âncora, assim como o href atributo.
-
+```html
 <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">The Brown Bear</a>
 No exemplo acima, definir o target atributo para "_blank" instrui o navegador a abrir a página relevante da Wikipedia em uma nova janela.
-
+```
 Neste exercício, usamos a terminologia “abrir em uma nova janela”. É provável que você esteja usando um navegador moderno que abre sites em novas guias , em vez de novas janelas. Antes do advento dos navegadores com guias, janelas adicionais do navegador precisavam ser abertas para visualizar mais sites. O target="_blank" atributo, quando usado em navegadores modernos, abrirá novos sites em uma nova aba.
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -758,28 +826,29 @@ Neste exercício, usamos a terminologia “abrir em uma nova janela”. É prov�
     </div>
   </body>
 </html>
-
+```
 *Vinculação à página relativa*
 
 Até agora, você aprendeu como criar links para páginas da web externas. Muitos sites também possuem links para páginas da Web internas, como Home, About e Contact.
 
 Antes de aprendermos como vincular páginas internas, vamos estabelecer onde nossos arquivos são armazenados. Ao criar sites estáticos de várias páginas, os desenvolvedores da Web geralmente armazenam arquivos HTML no diretório raiz ou em uma pasta principal onde todos os arquivos do projeto são armazenados. À medida que o tamanho dos projetos que você cria aumenta, você pode usar pastas adicionais dentro da pasta principal do projeto para organizar seu código.
-
+```html
 project-folder/
 |—— about.html
 |—— contact.html
 |—— index.html
-
+```
 O exemplo acima mostra três arquivos diferentes — about.html , contact.html e index.html em uma pasta.
 
 Os arquivos HTML geralmente são armazenados na mesma pasta, conforme mostrado no exemplo acima. Se o navegador estiver exibindo index.html , ele também saberá que about.html e contact.html estão na mesma pasta. Como os arquivos são armazenados na mesma pasta, podemos vincular páginas da Web usando um caminho relativo .
-
+```html
 <a href="./contact.html">Contact</a>
 Neste exemplo, a <a>tag é usada com um caminho relativo para vincular do arquivo HTML atual ao contact.htmlarquivo na mesma pasta. Na página da web, Contact aparecerá como um link.
-
+```
 Um caminho relativo é um nome de arquivo que mostra o caminho para um arquivo local (um arquivo no mesmo site, como ./index.html) versus um caminho absoluto (um URL completo, como o https://www.codecademy.com/learn/learn-htmlque é armazenado em uma pasta diferente). O ./in ./index.html diz ao navegador para procurar o arquivo na pasta atual.
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -822,23 +891,25 @@ Um caminho relativo é um nome de arquivo que mostra o caminho para um arquivo l
     </div>
   </body>
 </html>
-
+```
 *Linking At Will -Ligando à vontade*
 
 Você provavelmente já visitou sites onde nem todos os links eram compostos de texto. Talvez os links em que você clicou fossem imagens ou alguma outra forma de conteúdo.
 
 Até agora, adicionamos links compostos apenas de texto, como o seguinte:
-
+```html
 <a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank">Prickly Pear</a>
 Links somente de texto, no entanto, diminuiriam significativamente sua flexibilidade como desenvolvedor web!
 
 Felizmente, o HTML permite que você transforme praticamente qualquer elemento em um link envolvendo esse elemento com um elemento âncora. Com esta técnica, é possível transformar imagens em links simplesmente envolvendo o <img>elemento com um <a>elemento.
-
+```
+```html
 <a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"><img src="https://www.Prickly_Pear_Closeup.jpg" alt="A red prickly pear fruit"/></a>
 
 No exemplo acima, uma imagem de uma pera espinhosa foi transformada em um link envolvendo a parte externa do <img>elemento com um <a>elemento.
-
+```
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
 
@@ -885,6 +956,7 @@ No exemplo acima, uma imagem de uma pera espinhosa foi transformada em um link e
 </body>
 
 </html>
+```
 
 *Link para a mesma página*
 
@@ -893,21 +965,24 @@ Neste ponto, temos todo o conteúdo que queremos em nossa página. Como temos ta
 Quando os usuários visitam nosso site, queremos que eles possam clicar em um link e fazer com que a página role automaticamente para uma seção específica.
 
 Para vincular a um destino na mesma página, devemos fornecer ao destino um id , como este:
-
+```html
 <p id="top">This is the top of the page!</p>
 <h1 id="bottom">This is the bottom! </h1>
 Neste exemplo, o <p>elemento é atribuído como id“top” e o <h1>elemento é atribuído como “bottom”. Um id pode ser adicionado à maioria dos elementos em uma página da web.
-
+```
 Um id deve ser descritivo para facilitar a memorização da finalidade de um link. O link de destino é uma string contendo o #caractere e o id.
-
+```html
 <ol>
   <li><a href="#top">Top</a></li>
   <li><a href="#bottom">Bottom</a></li>
 </ol>
+```
+```html
 No exemplo acima, os links para <p id="top">e <h1 id="bottom">são incorporados em uma lista ordenada. Esses links aparecem no navegador como uma lista numerada de links. Um idé especialmente útil para organizar o conteúdo pertencente a um div!
-
+```
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
 
@@ -958,7 +1033,7 @@ No exemplo acima, os links para <p id="top">e <h1 id="bottom">são incorporados 
 </body>
 
 </html>
-
+```
 *Espaço em branco*
 
 O restante desta lição se concentrará em algumas ferramentas que os desenvolvedores usam para tornar o código mais fácil de interpretar.
@@ -970,7 +1045,7 @@ Ambas as ferramentas tiram vantagem do fato de que a posição dos elementos em 
 Por exemplo, se você quiser aumentar o espaço entre dois parágrafos em sua página da Web, não poderá fazer isso adicionando espaço entre os elementos de parágrafo no arquivo index.html . O navegador ignora espaços em branco em arquivos HTML quando renderiza uma página da Web, para que possa ser usado como uma ferramenta para tornar o código mais fácil de ler e seguir.
 
 O que torna o exemplo abaixo difícil de ler?
-
+```html
 <body><p>Paragraph 1</p><p>Paragraph 2</p></body>
 Você tem que ler a linha inteira para saber quais elementos estão presentes. Compare o exemplo acima com este:
 
@@ -978,15 +1053,16 @@ Você tem que ler a linha inteira para saber quais elementos estão presentes. C
     <p>Paragraph 1</p>
     <p>Paragraph 2</p>
 </body>
-
+```
 Este exemplo é mais fácil de ler, pois cada elemento está em sua própria linha. Enquanto o primeiro exemplo exigia que você lesse toda a linha de código para identificar os elementos, este exemplo facilita a identificação da tag body e dois parágrafos.
 
 Um navegador renderiza os dois exemplos acima da mesma maneira:
-
+```html
 Paragraph 1
 Paragraph 2
-
+```
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
 
@@ -996,34 +1072,37 @@ Paragraph 2
 </body>
 
 </html>
-
+```
 *Recuo -indentation*
 
 A segunda ferramenta que os desenvolvedores da Web usam para tornar a estrutura do código mais fácil de ler é a indentação . Os espaços são inseridos usando as barras space e no teclado.tab
-
+```html
 O World Wide Web Consortium [](https://www.w3.org/Consortium/), ou W3C, é responsável por manter os padrões de estilo do HTML. No momento da escrita, o W3C recomenda 2 espaços de recuo ao escrever código HTML. Embora seu código funcione sem exatamente dois espaços, esse padrão é seguido pela maioria dos desenvolvedores web profissionais. A indentação é usada para visualizar facilmente quais elementos estão aninhados em outros elementos.
-
+```
+```html
 <body>
   <p>Paragraph 1</p>
   <div>
     <p>Paragraph 2</p>
   </div>
 </body>
-
+```
+```html
 No exemplo acima, Paragraph 1 e a <div> tag está aninhada dentro da <body> tag, então elas são recuadas em dois espaços. O Paragraph 2 elemento está aninhado dentro da <div>tag, portanto, é recuado dois espaços adicionais.
-
+```
 `Exemplo`
+```html
 <body>
   <h1>Whitespace</h1>    
   <div>
     <p>Whitespace and indentation make html documents easier to read.</p>
   </div>  
 </body>
-
+```
 *Comentários*
 
 Os arquivos HTML também permitem que você adicione comentários ao seu código.
-
+```html
 Os comentários começam com <!--e terminam com -->. Quaisquer caracteres intermediários serão ignorados pelo seu navegador.
 
 <!-- This is a comment that the browser will not display. -->
@@ -1037,8 +1116,10 @@ Neste exemplo, o comentário é usado para indicar que o texto a seguir compõe 
 
 <!-- <p> Test Code </p> -->
 No exemplo acima, um elemento HTML válido (um elemento de parágrafo) foi "comentado". Essa prática é útil quando há um código que você deseja experimentar ou ao qual deseja retornar no futuro.
+```
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <!-- <html> 
   <head>
@@ -1049,7 +1130,7 @@ No exemplo acima, um elemento HTML válido (um elemento de parágrafo) foi "come
     <p>- Frida Kahlo</p>
   </body>
 </html> -->
-
+```
 *Tags HTML*
 
 Agora você conhece todos os elementos básicos e a configuração necessária para estruturar uma página HTML e adicionar diferentes tipos de conteúdo. Com a ajuda do CSS, muito em breve você estará criando belos sites!
@@ -1057,34 +1138,35 @@ Agora você conhece todos os elementos básicos e a configuração necessária p
 Embora algumas tags tenham um propósito muito específico, como tags de imagem e vídeo, a maioria das tags é usada para descrever o conteúdo que elas cercam, o que nos ajuda a modificar e estilizar nosso conteúdo posteriormente. Há um número aparentemente infinito de tags para usar (muito mais do que ensinamos). Saber quando usar cada um é baseado em como você deseja descrever o conteúdo do seu HTML. Tags descritivas e bem escolhidas são uma chave para o desenvolvimento web de alta qualidade. Uma lista completa de tags HTML disponíveis pode ser encontrada na documentação do Mozilla .[](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 Vamos rever o que você aprendeu nesta lição:
-
+```html
 A <!DOCTYPE html>declaração deve ser sempre a primeira linha de código em seus arquivos HTML. Isso permite que o navegador saiba qual versão do HTML esperar.
+```
 
-O <html>elemento conterá todo o seu código HTML.
+    O <html>elemento conterá todo o seu código HTML.
 
-As informações sobre a página da Web, como o título, pertencem <head>à página.
+    As informações sobre a página da Web, como o título, pertencem <head>à página.
 
-Você pode adicionar um título à sua página da Web usando o <title>elemento, dentro do cabeçalho.
+    Você pode adicionar um título à sua página da Web usando o <title>elemento, dentro do cabeçalho.
 
-O título de uma página da Web aparece na guia de um navegador.
+    O título de uma página da Web aparece na guia de um navegador.
 
-As tags de âncora ( <a>) são usadas para vincular a páginas internas, páginas externas ou conteúdo na mesma página.
+    As tags de âncora ( <a>) são usadas para vincular a páginas internas, páginas externas ou conteúdo na mesma página.
 
-Você pode criar seções em uma página da Web e pular para elas usando <a>tags e adicionando ids aos elementos para os quais deseja pular.
+    Você pode criar seções em uma página da Web e pular para elas usando <a>tags e adicionando ids aos elementos para os quais deseja pular.
 
 O espaço em branco entre os elementos HTML ajuda a facilitar a leitura do código sem alterar a forma como os elementos aparecem no navegador.
 
 A indentação também ajuda a tornar o código mais fácil de ler. Isso torna as relações pai-filho visíveis.
-
+```html
 Os comentários são escritos em HTML usando a seguinte sintaxe: <!-- comment -->.
-
+```
 
 **TABELAS HTML**
 
 *Criar uma tabela*
 
 Antes de exibir os dados, devemos primeiro criar a tabela que conterá os dados usando o <table>elemento.
-
+```html
 <table>
  
 </table>
@@ -1116,11 +1198,11 @@ O <table> elemento conterá todos os dados tabulares que planejamos exibir.
 
 </body>
 </html>
-
+```
 *Linhas da tabela*
 
 Em muitos programas que usam tabelas, a tabela já está predefinida para você, o que significa que ela contém as linhas, colunas e células que conterão os dados . Em HTML, todos esses componentes devem ser criados.
-
+```html
 A primeira etapa para inserir dados na tabela é adicionar linhas usando o elemento linha da tabela : <tr>.
 
 <table>
@@ -1129,10 +1211,12 @@ A primeira etapa para inserir dados na tabela é adicionar linhas usando o eleme
   <tr>
   </tr>
 </table>
+```
 
 No exemplo acima, duas linhas foram adicionadas à tabela.
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -1160,9 +1244,9 @@ No exemplo acima, duas linhas foram adicionadas à tabela.
 
 </body>
 </html>
-
+```
 *Dados da Tabela*
-
+```html
 As linhas não são suficientes para adicionar dados a uma tabela. Cada elemento de célula também deve ser definido. Em HTML, você pode adicionar dados usando o elemento de dados da tabela : <td>.
 
 <table>
@@ -1171,12 +1255,13 @@ As linhas não são suficientes para adicionar dados a uma tabela. Cada elemento
     <td>81</td>
   </tr>
 </table>
-
+```
 No exemplo acima, dois pontos de dados ( 73 e 81) foram inseridos na linha existente. Ao adicionar dois pontos de dados, criamos duas células de dados.
 
 Se a tabela fosse exibida no navegador, mostraria uma tabela com uma linha e duas colunas.
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -1207,14 +1292,16 @@ Se a tabela fosse exibida no navegador, mostraria uma tabela com uma linha e dua
 
 </body>
 </html>
+```
 
 *Cabeçalhos de Tabela*
-
+```html
 Os dados da tabela não fazem muito sentido sem títulos para descrever o que os dados representam.
 
 Para adicionar títulos a linhas e colunas, você pode usar o elemento de cabeçalho da tabela : <th>.
 
 O elemento de cabeçalho da tabela é usado exatamente como um elemento de dados da tabela, exceto com um título relevante. Assim como os dados da tabela, um cabeçalho de tabela deve ser colocado em uma linha da tabela.
+
 
 <table>
   <tr>
@@ -1228,7 +1315,7 @@ O elemento de cabeçalho da tabela é usado exatamente como um elemento de dados
     <td>81</td>
   </tr>
 </table>
-
+```
 O que aconteceu no código acima?
 
 Primeiro, uma nova linha foi adicionada para conter os três títulos: um título em branco, um Saturday título e um Sunday título. O cabeçalho em branco cria a célula de tabela extra necessária para alinhar os cabeçalhos de tabela corretamente sobre os dados aos quais correspondem.
@@ -1236,13 +1323,13 @@ Primeiro, uma nova linha foi adicionada para conter os três títulos: um títul
 Na segunda linha, um cabeçalho de tabela foi adicionado como título de linha: Temperature.
 
 Quando renderizado, este código aparecerá semelhante à imagem abaixo:
-
+```html
 ------------------------------------------------------------
 '               '     saturday      '       sunday          '
 '---------------'-------------------'-----------------------'
 ' temperature   '        73         '        81             '
 '---------------'-------------------'-----------------------'
-
+```
 
 Observe, também, o uso do scope atributo, que pode assumir um de dois valores:
 
@@ -1252,6 +1339,7 @@ col - este valor deixa claro que o cabeçalho é para uma coluna.
 O código HTML para tabelas pode parecer um pouco estranho no começo, mas analisá-lo peça por peça ajuda a tornar o código mais compreensível.
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -1286,20 +1374,21 @@ O código HTML para tabelas pode parecer um pouco estranho no começo, mas anali
 
 </body>
 </html>
+```
 
 *Bordas da tabela*
 
 Até agora, as tabelas que você criou foram um pouco difíceis de ler porque não têm bordas.
 
 Em versões mais antigas do HTML, uma borda pode ser adicionada a uma tabela usando o border atributo e definindo-a como um número inteiro. Este inteiro representaria a espessura da borda.
-
+```html
 <table border="1">
   <tr>
     <td>73</td>
     <td>81</td>
   </tr>
 </table>
-
+```
 O código no exemplo acima está obsoleto , portanto, não o use. Destina-se a ilustrar convenções mais antigas que você pode encontrar ao ler o código de outros desenvolvedores.
 
 O navegador provavelmente ainda interpretará seu código corretamente se você usar o border atributo, mas isso não significa que o atributo deva ser usado.
@@ -1315,6 +1404,7 @@ table, td {
 O código no exemplo acima usa CSS em vez de HTML para mostrar as bordas da tabela.
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -1366,6 +1456,7 @@ O código no exemplo acima usa CSS em vez de HTML para mostrar as bordas da tabe
 
 </body>
 </html>
+```
 
 *Colunas de abrangência*
 
@@ -1374,7 +1465,7 @@ E se a tabela contiver dados que abrangem várias colunas?
 Por exemplo, um calendário pessoal pode ter eventos que abrangem várias horas ou até vários dias.
 
 Os dados podem abranger colunas usando o colspan atributo. O atributo aceita um número inteiro (maior ou igual a 1) para indicar o número de colunas que ele abrange.
-
+```html
 <table>
   <tr>
     <th>Monday</th>
@@ -1386,10 +1477,11 @@ Os dados podem abranger colunas usando o colspan atributo. O atributo aceita um 
     <td>Back in Town</td>
   </tr>
 </table>
-
+```
 No exemplo acima, os dados Out of Townabrangem os cabeçalhos da tabela Mondaye usando o valor (duas colunas). Os dados aparecem apenas sob o título.Tuesday2Back in TownWednesday
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -1449,13 +1541,13 @@ No exemplo acima, os dados Out of Townabrangem os cabeçalhos da tabela Mondaye 
 
 </body>
 </html>
-
+```
 *Abrangendo Linhas*
 
 Os dados também podem abranger várias linhas usando o rowspanatributo.
 
 O rowspanatributo é usado para dados que abrangem várias linhas (talvez um evento continue por várias horas em um determinado dia). Ele aceita um número inteiro (maior ou igual a 1) para denotar o número de linhas que abrange.
-
+```html
 <table>
   <tr> <!-- Row 1 -->     
     <th></th>
@@ -1475,6 +1567,7 @@ O rowspanatributo é usado para dados que abrangem várias linhas (talvez um eve
     <td>Dinner</td>
   </tr>
 </table>
+```
 No exemplo acima, há quatro linhas:
 
 A primeira linha contém uma célula vazia e os dois cabeçalhos de coluna.
@@ -1483,6 +1576,7 @@ A terceira linha contém apenas o Afternoontítulo da linha.
 A quarta linha contém apenas a Dinnerentrada, já que “Relax” se estende até a célula próxima a ela.
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -1542,19 +1636,20 @@ A quarta linha contém apenas a Dinnerentrada, já que “Relax” se estende at
 
 </body>
 </html>
-
+```
 *Bordas da tabela*
 
 Até agora, as tabelas que você criou foram um pouco difíceis de ler porque não têm bordas.
 
 Em versões mais antigas do HTML, uma borda pode ser adicionada a uma tabela usando o borderatributo e definindo-a como um número inteiro. Este inteiro representaria a espessura da borda.
-
+```html
 <table border="1">
   <tr>
     <td>73</td>
     <td>81</td>
   </tr>
 </table>
+```
 O código no exemplo acima está obsoleto , portanto, não o use. Destina-se a ilustrar convenções mais antigas que você pode encontrar ao ler o código de outros desenvolvedores.
 
 O navegador provavelmente ainda interpretará seu código corretamente se você usar o borderatributo, mas isso não significa que o atributo deva ser usado.
@@ -1567,7 +1662,7 @@ table, td {
   border: 1px solid black;
 }
 O código no exemplo acima usa CSS em vez de HTML para mostrar as bordas da tabela.
-
+```html
   <tr>
     <td>Davie's Burgers</td>
     <td>2</td>
@@ -1593,11 +1688,13 @@ O código no exemplo acima usa CSS em vez de HTML para mostrar as bordas da tabe
     <td>1</td>
     <td>Enter Order</td>
   </tr>
+```
+*Instruções*
 
-Instruções
 Vamos precisar de mais alguns dados na tabela. Adicione os seguintes dados à tabela. Certifique-se de colocá-lo após a segunda linha da tabela.
 
 `Exemplo`
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -1659,15 +1756,18 @@ Vamos precisar de mais alguns dados na tabela. Adicione os seguintes dados à ta
 
 </body>
 </html>
+```
+COntinuar Estudos | Codecademy HTML- (https://www.codecademy.com/learn/learn-html)
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
-`CONTINUAR DAQUII`
 
-
-
-
-
-**Revisão**
-
+># Revisão
+```html
 Elements and Structure
 <em> Emphasis Element
 The <em> emphasis element emphasizes text and browsers will usually italicize the emphasized text by default.
@@ -1902,3 +2002,4 @@ URL paths in HTML can be absolute paths, like a full URL, for example: https://d
 <a href="https://developer.mozilla.org/en-US/docs/Web">The URL for this anchor element is an absolute file path.</a>
  
 <a href="./about.html">The URL for this anchor element is a relative file path.</a>
+```
