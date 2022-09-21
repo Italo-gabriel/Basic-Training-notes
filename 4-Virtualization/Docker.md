@@ -233,6 +233,7 @@ CONTAINER SÃO:
 * CONSEGUIMOS ISOLAR UMA APLICAÇÃO;
 * COMPARTILHA O MESMO SISTEMA OPERACIONAL;
 * EVITA TER QUE CUIDAR DE DIVERSOS SISTEMAS 
+
 OPEREACIONAIS, COMO FUNCIONA NAS VM'S
 ```
 `O QUE O DOCKER FAZ?`
@@ -538,23 +539,3 @@ Caso deseje reiniciar o container que foi desligado e não iniciar um novo, bast
 ![] (https://blog.geekhunter.com.br/o-que-e-deploy/)
 
 ![] (https://www.redhat.com/pt-br/topics/virtualization/what-is-a-hypervisor)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
